@@ -108,7 +108,10 @@
 			"ID": "64fb037c48d9272579402d8e79736d46",
 			"TypeName": "Game.ShipMovement",
 			"ParentID": "aa5d4e8241dc383e9fcd06b51de402a7",
-			"character_controller": "aa5d4e8241dc383e9fcd06b51de402a7"
+			"character_controller": "aa5d4e8241dc383e9fcd06b51de402a7",
+			"camera_socket": "d32bab9247a885d6965addace1b47e69",
+			"ship_actor": "ee18318f47ebaf65c68762b6f43918b5",
+			"ship_speed": 500.0
 		},
 		{
 			"ID": "ee18318f47ebaf65c68762b6f43918b5",
@@ -140,9 +143,15 @@
 			}
 		},
 		{
+			"ID": "d32bab9247a885d6965addace1b47e69",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "aa5d4e8241dc383e9fcd06b51de402a7",
+			"Name": "CameraSocket"
+		},
+		{
 			"ID": "140d048b4731f812289b0482192a1971",
 			"TypeName": "FlaxEngine.Camera",
-			"ParentID": "aa5d4e8241dc383e9fcd06b51de402a7",
+			"ParentID": "d32bab9247a885d6965addace1b47e69",
 			"Name": "Camera",
 			"Transform": {
 				"Translation": {
