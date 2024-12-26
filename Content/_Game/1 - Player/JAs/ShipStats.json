@@ -1,0 +1,15 @@
+{
+	"ID": "38e557b24600187c879c7f829b51acfe",
+	"TypeName": "Game.ShipStatsJA",
+	"EngineBuild": 6605,
+	"Data": {
+	"ship_speed": 300.0,
+	"mouse_sensitivity": 5.0,
+	"max_pitch": {
+		"X": -45.0,
+		"Y": 45.0
+	},
+	"camera_smoothing": 3.0,
+	"ship_smoothing": 2.5
+}
+}

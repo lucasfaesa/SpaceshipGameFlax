@@ -17,6 +17,8 @@ void ShipMovement::OnEnable()
 {
     Screen::SetCursorLock(CursorLockMode::Locked);
     Screen::SetCursorVisible(false);
+
+
         
 }
 
@@ -28,20 +30,21 @@ void ShipMovement::OnDisable()
 
 void ShipMovement::OnStart()
 {
-    if (!character_controller || !camera_socket || !ship_actor)
+    if (!character_controller || !camera_socket || !ship_actor || !ship_stats_JA_asset)
     {
         throw std::runtime_error("Missing refs");
 	}
     else
     {
         _tickUpdate = true;
+        ship_stats_ = ship_stats_JA_asset.GetInstance();
     }
 }
 
 void ShipMovement::OnUpdate()
 {
     input_reading();
-    move(movement_vector_, ship_speed);
+    move(movement_vector_, ship_stats_->ship_speed);
 }
 
 void ShipMovement::input_reading()
@@ -97,13 +100,13 @@ void ShipMovement::move(const Vector3& direction, const float& speed) const
 
 void ShipMovement::mouse_look()
 {
-    yaw_ += mouse_delta_.X * mouse_sensitivity * Time::GetDeltaTime();
-    pitch_ += mouse_delta_.Y * mouse_sensitivity * Time::GetDeltaTime();
-    pitch_ = Math::Clamp(pitch_, max_pitch.X, max_pitch.Y);
+    yaw_ += mouse_delta_.X * ship_stats_->mouse_sensitivity * Time::GetDeltaTime();
+    pitch_ += mouse_delta_.Y * ship_stats_->mouse_sensitivity * Time::GetDeltaTime();
+    pitch_ = Math::Clamp(pitch_, ship_stats_->max_pitch.X, ship_stats_->max_pitch.Y);
 
     Quaternion const target_orientation = Quaternion::Euler(pitch_, yaw_, 0);
-    float const camera_lerp_amount = camera_smoothing * Time::GetDeltaTime();
-    float const ship_lerp_amount = ship_smoothing * Time::GetDeltaTime();
+    float const camera_lerp_amount = ship_stats_->camera_smoothing * Time::GetDeltaTime();
+    float const ship_lerp_amount = ship_stats_->ship_smoothing * Time::GetDeltaTime();
     Quaternion new_camera_orientation;
     Quaternion new_ship_orientation;
 

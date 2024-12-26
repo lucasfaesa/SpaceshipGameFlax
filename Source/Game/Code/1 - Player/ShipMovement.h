@@ -1,5 +1,6 @@
 ﻿#pragma once
 
+#include "ShipStatsJA.h"
 #include "Engine/Scripting/Script.h"
 #include "Engine/Scripting/ScriptingObjectReference.h"
 #include "Engine/Debug/DebugLog.h"
@@ -18,16 +19,12 @@ API_CLASS() class GAME_API ShipMovement : public Script
 API_AUTO_SERIALIZATION();
 DECLARE_SCRIPTING_TYPE(ShipMovement);
 
-	API_FIELD() ScriptingObjectReference<CharacterController> character_controller = nullptr;
-	API_FIELD() ScriptingObjectReference<Actor> camera_socket = nullptr;
-    API_FIELD() ScriptingObjectReference<Actor> ship_actor = nullptr;
+	API_FIELD(Attributes = "EditorDisplay(\"JAs\")") JsonAssetReference<ShipStatsJA> ship_stats_JA_asset;
 
-    API_FIELD() float ship_speed = 10.f;
-    API_FIELD() float mouse_sensitivity = 5.f;
-    API_FIELD() Vector2 max_pitch = Vector2(-45.f,45.f);
-    API_FIELD() float camera_smoothing = 10.f;
-    API_FIELD() float ship_smoothing = 10.f;
-
+	API_FIELD(Attributes = "EditorDisplay(\"References\")") ScriptingObjectReference<CharacterController> character_controller = nullptr;
+	API_FIELD(Attributes = "EditorDisplay(\"References\")") ScriptingObjectReference<Actor> camera_socket = nullptr;
+    API_FIELD(Attributes = "EditorDisplay(\"References\")") ScriptingObjectReference<Actor> ship_actor = nullptr;
+    
     void OnEnable() override;
     void OnDisable() override;
     void OnStart() override;
@@ -42,6 +39,8 @@ private:
 
 
 private:
+    ShipStatsJA* ship_stats_ = nullptr;
+
     Vector3 movement_vector_ = Vector3::Zero;
     Vector2 mouse_delta_ = Vector2::Zero;
     float yaw_ = 0.f;

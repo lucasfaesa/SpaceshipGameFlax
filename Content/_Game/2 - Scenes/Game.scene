@@ -108,10 +108,10 @@
 			"ID": "64fb037c48d9272579402d8e79736d46",
 			"TypeName": "Game.ShipMovement",
 			"ParentID": "aa5d4e8241dc383e9fcd06b51de402a7",
+			"ship_stats_JA_asset": "38e557b24600187c879c7f829b51acfe",
 			"character_controller": "aa5d4e8241dc383e9fcd06b51de402a7",
 			"camera_socket": "d32bab9247a885d6965addace1b47e69",
-			"ship_actor": "ee18318f47ebaf65c68762b6f43918b5",
-			"ship_speed": 500.0
+			"ship_actor": "ee18318f47ebaf65c68762b6f43918b5"
 		},
 		{
 			"ID": "ee18318f47ebaf65c68762b6f43918b5",
