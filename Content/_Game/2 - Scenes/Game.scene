@@ -1,0 +1,200 @@
+{
+	"ID": "c98c381648821a3e37ab2586e063813b",
+	"TypeName": "FlaxEngine.SceneAsset",
+	"EngineBuild": 6605,
+	"Data": [
+		{
+			"ID": "c98c381648821a3e37ab2586e063813b",
+			"TypeName": "FlaxEngine.Scene",
+			"LightmapSettings": {
+				"IndirectLightingIntensity": 1.0,
+				"GlobalObjectsScale": 1.0,
+				"ChartsPadding": 3,
+				"AtlasSize": 1024,
+				"BounceCount": 1,
+				"CompressLightmaps": true,
+				"UseGeometryWithNoMaterials": true,
+				"Quality": 10
+			}
+		},
+		{
+			"ID": "1c9aec924f8f52da27fff7ab97f289e6",
+			"TypeName": "FlaxEngine.DirectionalLight",
+			"ParentID": "c98c381648821a3e37ab2586e063813b",
+			"Name": "Sun",
+			"Transform": {
+				"Translation": {
+					"X": 40.0,
+					"Y": 160.0,
+					"Z": 0.0
+				},
+				"Orientation": {
+					"X": 0.3826834559440613,
+					"Y": 0.0,
+					"Z": 0.0,
+					"W": 0.9238795042037964
+				}
+			},
+			"Brightness": 3.140000104904175
+		},
+		{
+			"ID": "f8333a424d24ae10bad430965167a85b",
+			"TypeName": "FlaxEngine.Sky",
+			"ParentID": "c98c381648821a3e37ab2586e063813b",
+			"Name": "Sky",
+			"Transform": {
+				"Translation": {
+					"X": 40.0,
+					"Y": 150.0,
+					"Z": 0.0
+				}
+			},
+			"Sun": "1c9aec924f8f52da27fff7ab97f289e6"
+		},
+		{
+			"ID": "f1b5558a4574d62cf44e1a96fc565773",
+			"TypeName": "FlaxEngine.SkyLight",
+			"ParentID": "c98c381648821a3e37ab2586e063813b",
+			"Name": "SkyLight",
+			"Brightness": 2.5,
+			"CustomTexture": "c54410104ff39427bc11e5bc761d66b0"
+		},
+		{
+			"ID": "cace31ec4d095c42da856ca280a581c7",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "c98c381648821a3e37ab2586e063813b",
+			"Name": "Floor",
+			"Transform": {
+				"Translation": {
+					"X": 0.0,
+					"Y": -88.2132568359375,
+					"Z": 0.0
+				},
+				"Scale": {
+					"X": 14610.7783203125,
+					"Y": 1.0,
+					"Z": 14610.7783203125
+				}
+			},
+			"Model": "b43f0f8f4aaba3f3156896a5a22ba493",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "68b418a3401918753cfa07b673ccf7d6",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "aa5d4e8241dc383e9fcd06b51de402a7",
+			"TypeName": "FlaxEngine.CharacterController",
+			"ParentID": "c98c381648821a3e37ab2586e063813b",
+			"Name": "CharacterController",
+			"Transform": {
+				"Translation": {
+					"X": 9.35205078125,
+					"Y": 66.30482482910156,
+					"Z": -96.73684692382813
+				}
+			},
+			"Radius": 77.0,
+			"Height": 0.0,
+			"NonWalkableMode": 1
+		},
+		{
+			"ID": "64fb037c48d9272579402d8e79736d46",
+			"TypeName": "Game.ShipMovement",
+			"ParentID": "aa5d4e8241dc383e9fcd06b51de402a7",
+			"character_controller": "aa5d4e8241dc383e9fcd06b51de402a7"
+		},
+		{
+			"ID": "ee18318f47ebaf65c68762b6f43918b5",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "aa5d4e8241dc383e9fcd06b51de402a7",
+			"Name": "model",
+			"Transform": {
+				"Translation": {
+					"X": 0.0,
+					"Y": -30.273239135742189,
+					"Z": -16.074615478515626
+				},
+				"Scale": {
+					"X": 0.0299999937415123,
+					"Y": 0.0299999937415123,
+					"Z": 0.0299999937415123
+				}
+			},
+			"Model": "dae7b7654c755bc3fe391dba5cef651b",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "140d048b4731f812289b0482192a1971",
+			"TypeName": "FlaxEngine.Camera",
+			"ParentID": "aa5d4e8241dc383e9fcd06b51de402a7",
+			"Name": "Camera",
+			"Transform": {
+				"Translation": {
+					"X": 0.0,
+					"Y": 90.9544677734375,
+					"Z": -207.4019775390625
+				},
+				"Orientation": {
+					"X": 0.11649109423160553,
+					"Y": 0.0,
+					"Z": 0.0,
+					"W": 0.9931917786598206
+				}
+			}
+		},
+		{
+			"ID": "a2fecaa241676b4a5506d1aae1f58655",
+			"TypeName": "FlaxEngine.AudioListener",
+			"ParentID": "140d048b4731f812289b0482192a1971",
+			"Name": "Audio Listener"
+		},
+		{
+			"ID": "c025819b4e97520efd5df5b274e08898",
+			"TypeName": "FlaxEngine.PostFxVolume",
+			"ParentID": "c98c381648821a3e37ab2586e063813b",
+			"Name": "PostFxVolume",
+			"Priority": 1,
+			"IsBounded": false,
+			"Settings": {
+				"AO": {},
+				"GI": {
+					"Intensity": 0.6100000143051148
+				},
+				"Bloom": {},
+				"ToneMapping": {
+					"WhiteTint": 0.203000009059906
+				},
+				"ColorGrading": {},
+				"EyeAdaptation": {},
+				"CameraArtifacts": {
+					"VignetteIntensity": 2.0
+				},
+				"LensFlares": {},
+				"DepthOfField": {},
+				"MotionBlur": {
+					"OverrideFlags": 1,
+					"Enabled": false
+				},
+				"SSR": {},
+				"AA": {},
+				"PostFxMaterials": {}
+			}
+		}
+	]
+}
