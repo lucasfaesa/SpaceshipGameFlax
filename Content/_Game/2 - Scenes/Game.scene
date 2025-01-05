@@ -204,13 +204,6 @@
 			"TypeName": "FlaxEngine.UIControl",
 			"ParentID": "bb82f1f7455295631b4dfcbf309bf176",
 			"Name": "Canvas Scalar",
-			"Transform": {
-				"Translation": {
-					"X": -1.0,
-					"Y": 0.0,
-					"Z": 0.0
-				}
-			},
 			"Control": "FlaxEngine.GUI.CanvasScaler",
 			"Data": {
 	"ResolutionCurve": {
@@ -277,8 +270,8 @@
 		"Y": 1.0
 	},
 	"Offsets": {
-		"Left": -1.0,
-		"Right": 1.0,
+		"Left": 0.0,
+		"Right": 0.0,
 		"Top": 0.0,
 		"Bottom": 0.0
 	},
