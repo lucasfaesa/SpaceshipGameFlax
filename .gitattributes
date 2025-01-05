@@ -1,0 +1,2 @@
+*.dds filter=lfs diff=lfs merge=lfs -text
+*.flax filter=lfs diff=lfs merge=lfs -text

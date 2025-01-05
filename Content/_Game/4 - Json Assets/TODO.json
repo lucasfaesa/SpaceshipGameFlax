@@ -3,6 +3,6 @@
 	"TypeName": "Game.TodoJA",
 	"EngineBuild": 6605,
 	"Data": {
-	"todos": "particles, planets, skybox, mothership,"
+	"todos": "particles, planets, mothership, reset whole universe to center"
 }
 }

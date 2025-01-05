@@ -6,8 +6,8 @@
 	"ship_base_speed": 800.0,
 	"boost_speed_multiplier": 2.0,
 	"max_pitch": {
-		"X": -45.0,
-		"Y": 45.0
+		"X": -90.0,
+		"Y": 90.0
 	},
 	"mouse_sensitivity": 5.0,
 	"camera_smoothing": 3.0,

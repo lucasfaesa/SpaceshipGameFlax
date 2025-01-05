@@ -29,10 +29,10 @@
 					"Z": 0.0
 				},
 				"Orientation": {
-					"X": 0.3826834559440613,
-					"Y": 0.0,
-					"Z": 0.0,
-					"W": 0.9238795042037964
+					"X": 0.44189250469207766,
+					"Y": -0.46806901693344118,
+					"Z": 0.29248231649398806,
+					"W": 0.707175076007843
 				}
 			},
 			"Brightness": 3.140000104904175
@@ -49,14 +49,15 @@
 					"Z": 0.0
 				}
 			},
-			"Sun": "1c9aec924f8f52da27fff7ab97f289e6"
+			"Sun": "1c9aec924f8f52da27fff7ab97f289e6",
+			"SunDiscScale": 3.9700000286102297
 		},
 		{
 			"ID": "f1b5558a4574d62cf44e1a96fc565773",
 			"TypeName": "FlaxEngine.SkyLight",
 			"ParentID": "c98c381648821a3e37ab2586e063813b",
 			"Name": "SkyLight",
-			"Brightness": 2.5,
+			"Brightness": 1.0,
 			"CustomTexture": "c54410104ff39427bc11e5bc761d66b0"
 		},
 		{
@@ -174,38 +175,6 @@
 			"Name": "Audio Listener"
 		},
 		{
-			"ID": "c025819b4e97520efd5df5b274e08898",
-			"TypeName": "FlaxEngine.PostFxVolume",
-			"ParentID": "c98c381648821a3e37ab2586e063813b",
-			"Name": "PostFxVolume",
-			"Priority": 1,
-			"IsBounded": false,
-			"Settings": {
-				"AO": {},
-				"GI": {
-					"Intensity": 0.6100000143051148
-				},
-				"Bloom": {},
-				"ToneMapping": {
-					"WhiteTint": 0.203000009059906
-				},
-				"ColorGrading": {},
-				"EyeAdaptation": {},
-				"CameraArtifacts": {
-					"VignetteIntensity": 2.0
-				},
-				"LensFlares": {},
-				"DepthOfField": {},
-				"MotionBlur": {
-					"OverrideFlags": 1,
-					"Enabled": false
-				},
-				"SSR": {},
-				"AA": {},
-				"PostFxMaterials": {}
-			}
-		},
-		{
 			"ID": "bb82f1f7455295631b4dfcbf309bf176",
 			"TypeName": "FlaxEngine.UICanvas",
 			"ParentID": "c98c381648821a3e37ab2586e063813b",
@@ -235,6 +204,13 @@
 			"TypeName": "FlaxEngine.UIControl",
 			"ParentID": "bb82f1f7455295631b4dfcbf309bf176",
 			"Name": "Canvas Scalar",
+			"Transform": {
+				"Translation": {
+					"X": -1.0,
+					"Y": 0.0,
+					"Z": 0.0
+				}
+			},
 			"Control": "FlaxEngine.GUI.CanvasScaler",
 			"Data": {
 	"ResolutionCurve": {
@@ -301,8 +277,8 @@
 		"Y": 1.0
 	},
 	"Offsets": {
-		"Left": 0.0,
-		"Right": 0.0,
+		"Left": -1.0,
+		"Right": 1.0,
 		"Top": 0.0,
 		"Bottom": 0.0
 	},
@@ -518,6 +494,46 @@
 	"Visible": true,
 	"AutoFocus": false
 }
+		},
+		{
+			"ID": "d3eb7f5644f1fdc80d9c46be5777def3",
+			"TypeName": "FlaxEngine.Skybox",
+			"ParentID": "c98c381648821a3e37ab2586e063813b",
+			"Name": "Skybox",
+			"Exposure": 1.0,
+			"CubeTexture": "c059061e4215b0d653858cb2eab754fd"
+		},
+		{
+			"ID": "c025819b4e97520efd5df5b274e08898",
+			"TypeName": "FlaxEngine.PostFxVolume",
+			"ParentID": "c98c381648821a3e37ab2586e063813b",
+			"Name": "PostFxVolume",
+			"Priority": 1,
+			"IsBounded": false,
+			"Settings": {
+				"AO": {},
+				"GI": {
+					"Intensity": 0.6100000143051148
+				},
+				"Bloom": {},
+				"ToneMapping": {
+					"WhiteTint": 0.203000009059906
+				},
+				"ColorGrading": {},
+				"EyeAdaptation": {},
+				"CameraArtifacts": {
+					"VignetteIntensity": 2.0
+				},
+				"LensFlares": {},
+				"DepthOfField": {},
+				"MotionBlur": {
+					"OverrideFlags": 1,
+					"Enabled": false
+				},
+				"SSR": {},
+				"AA": {},
+				"PostFxMaterials": {}
+			}
 		}
 	]
 }
