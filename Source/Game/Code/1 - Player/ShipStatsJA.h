@@ -14,10 +14,12 @@ API_CLASS() class GAME_API ShipStatsJA : public ISerializable
     DECLARE_SCRIPTING_TYPE_NO_SPAWN(ShipStatsJA);
 public:
 
-    API_FIELD(Attributes = "EditorDisplay(\"Data\")") float ship_speed = 10.f;
+    API_FIELD(Attributes = "EditorDisplay(\"Data\")") float ship_base_speed = 10.f;
+    API_FIELD(Attributes = "EditorDisplay(\"Data\")") float boost_speed_multiplier = 2.f;
     API_FIELD(Attributes = "EditorDisplay(\"Data\")") float mouse_sensitivity = 5.f;
     API_FIELD(Attributes = "EditorDisplay(\"Data\")") Vector2 max_pitch;
     API_FIELD(Attributes = "EditorDisplay(\"Data\")") float camera_smoothing = 10.f;
-    API_FIELD(Attributes = "EditorDisplay(\"Data\")") float ship_smoothing = 10.f;
+    API_FIELD(Attributes = "EditorDisplay(\"Data\")") float ship_turn_smoothing = 10.f;
+    API_FIELD(Attributes = "EditorDisplay(\"Data\")") float ship_strafe_smoothing = 10.f;
 
 };

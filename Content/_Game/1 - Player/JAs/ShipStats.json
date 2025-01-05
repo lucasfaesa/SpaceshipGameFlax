@@ -3,13 +3,15 @@
 	"TypeName": "Game.ShipStatsJA",
 	"EngineBuild": 6605,
 	"Data": {
-	"ship_speed": 300.0,
+	"ship_base_speed": 500.0,
+	"boost_speed_multiplier": 2.0,
 	"mouse_sensitivity": 5.0,
 	"max_pitch": {
 		"X": -45.0,
 		"Y": 45.0
 	},
 	"camera_smoothing": 3.0,
-	"ship_smoothing": 2.5
+	"ship_turn_smoothing": 10.0,
+	"ship_strafe_smoothing": 10.0
 }
 }

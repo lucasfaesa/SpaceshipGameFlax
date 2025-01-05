@@ -10,16 +10,13 @@ ShipMovement::ShipMovement(const SpawnParams& params)
     : Script(params)
 {
     _tickUpdate = true;
-	
+
 }
 
 void ShipMovement::OnEnable()
 {
     Screen::SetCursorLock(CursorLockMode::Locked);
     Screen::SetCursorVisible(false);
-
-
-        
 }
 
 void ShipMovement::OnDisable()
@@ -38,13 +35,14 @@ void ShipMovement::OnStart()
     {
         _tickUpdate = true;
         ship_stats_ = ship_stats_JA_asset.GetInstance();
+        ship_speed_ = ship_stats_->ship_base_speed;
     }
 }
 
 void ShipMovement::OnUpdate()
 {
     input_reading();
-    move(movement_vector_, ship_stats_->ship_speed);
+    move(movement_vector_, ship_speed_);
 }
 
 void ShipMovement::input_reading()
@@ -54,7 +52,7 @@ void ShipMovement::input_reading()
     mouse_look();
 }
 
-void ShipMovement::get_keys_input()
+void ShipMovement::get_axis_input()
 {
     const float horizontal_value = Input::GetAxis(INPUT_HORIZONTAL);
     const float depth_value = Input::GetAxis(INPUT_VERTICAL);
@@ -62,7 +60,7 @@ void ShipMovement::get_keys_input()
     movement_vector_ = Vector3(horizontal_value, 0, depth_value);
 }
 
-void ShipMovement::get_axis_input()
+void ShipMovement::get_keys_input()
 {
     float altitude_value = 0.0f;
 
@@ -80,12 +78,23 @@ void ShipMovement::get_axis_input()
 
     mouse_delta_ = Vector2(Input::GetAxis(TEXT("Mouse X")), Input::GetAxis(TEXT("Mouse Y")));
 
+
+    if (Input::GetActionState(INPUT_BOOST) == InputActionState::Pressing)
+    {
+        ship_speed_ = ship_stats_->ship_base_speed * ship_stats_->boost_speed_multiplier;
+    }
+	else
+    {
+        ship_speed_ = ship_stats_->ship_base_speed;
+    }
+    DebugLog::Log(LogType::Info, String::Format(TEXT("Speed: {0}"), ship_speed_));
+
     //DebugLog::Log(LogType::Info, String::Format(TEXT("Mouse delta X:{0}, Y:{1}"), mouse_delta.X, mouse_delta.Y));
 }
 
 void ShipMovement::move(const Vector3& direction, const float& speed) const
 {
-    Matrix ship_transform = ship_actor->GetTransform().GetWorld();
+    const Matrix ship_transform = ship_actor->GetTransform().GetWorld();
 
     Vector3 movement_direction;
 
@@ -106,7 +115,7 @@ void ShipMovement::mouse_look()
 
     Quaternion const target_orientation = Quaternion::Euler(pitch_, yaw_, 0);
     float const camera_lerp_amount = ship_stats_->camera_smoothing * Time::GetDeltaTime();
-    float const ship_lerp_amount = ship_stats_->ship_smoothing * Time::GetDeltaTime();
+    float const ship_lerp_amount = ship_stats_->ship_turn_smoothing * Time::GetDeltaTime();
     Quaternion new_camera_orientation;
     Quaternion new_ship_orientation;
 
