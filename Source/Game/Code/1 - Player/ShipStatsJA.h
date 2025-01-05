@@ -21,9 +21,7 @@ public:
     API_FIELD(Attributes = "EditorDisplay(\"Mouse\")") float mouse_sensitivity = 5.f;
     API_FIELD(Attributes = "EditorDisplay(\"Mouse\")") float camera_smoothing = 10.f;
 
-    API_FIELD(Attributes = "EditorDisplay(\"Smoothing\")") float ship_speed_smoothing = 10.f;
+    API_FIELD(Attributes = "EditorDisplay(\"Smoothing\")") float ship_acceleration_smoothing = 3.f;
+    API_FIELD(Attributes = "EditorDisplay(\"Smoothing\")") float ship_deceleration_smoothing = 1.f;
     API_FIELD(Attributes = "EditorDisplay(\"Smoothing\")") float ship_turn_smoothing = 10.f;
-    API_FIELD(Attributes = "EditorDisplay(\"Smoothing\")") float ship_strafe_smoothing = 10.f;
-
-    API_FIELD(Attributes = "EditorDisplay(\"Smoothing\")") float debug = 10.f;
 };

@@ -10,21 +10,28 @@ namespace Game;
 
 public class DebugUIController : Script
 {
-
-   [ShowInEditor] [Serialize] private UIControl speedLabel;
-   [ShowInEditor] [Serialize] private ShipMovement shipMovement;
-   
-   private Label speedLabelLabel;
+    
+    [Header("Script References")] 
+    [ShowInEditor] [Serialize] private ShipMovement shipMovement;
+    
+    [Header("UI References")]
+    [ShowInEditor] [Serialize] private UIControl velocityVector;
+    [ShowInEditor] [Serialize] private UIControl velocityMagnitude;
+    
+   private Label _velocityVectorLabel;
+   private Label _velocityMagnitudeLabel;
 
 
    public override void OnStart()
    {
-       speedLabelLabel = speedLabel.Get<Label>();
+       _velocityVectorLabel = velocityVector.Get<Label>();
+       _velocityMagnitudeLabel = velocityMagnitude.Get<Label>();
    }
 
    public override void OnUpdate()
    {
-       speedLabelLabel.Text = shipMovement.ReturnShipSpeed.ToString(CultureInfo.InvariantCulture);
+       _velocityVectorLabel.Text = $"Velocity: {shipMovement.ReturnShipVelocity.ToString(CultureInfo.InvariantCulture)}";
+       _velocityMagnitudeLabel.Text = $"Velocity: {shipMovement.ReturnShipVelocity.Length}";
        // Here you can add code that needs to be called every frame
    }
 }

@@ -43,7 +43,7 @@ private:
 private:
     ShipStatsJA* ship_stats_ = nullptr;
 
-
+    Vector3 current_velocity_ = Vector3::Zero;
     Vector3 movement_vector_ = Vector3::Zero;
 	Vector3 last_movement_direction_ = Vector3::Zero;
 
@@ -56,5 +56,5 @@ private:
 
     //properties to be exposed to C# script
 public:
-    API_FUNCTION() float GetShipSpeed() const { return ship_speed_; }
+    API_FUNCTION() Vector3 GetShipCurrentVelocity() const { return current_velocity_; }
 };

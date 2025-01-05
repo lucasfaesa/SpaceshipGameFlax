@@ -40,7 +40,7 @@ void ShipMovement::OnUpdate()
     input_reading();
 
     move(movement_vector_, ship_speed_);
-    DebugLog::Log(LogType::Info, String::Format(TEXT("move: {0}"), movement_vector_));
+    //DebugLog::Log(LogType::Info, String::Format(TEXT("move: {0}"), movement_vector_));
 }
 
 void ShipMovement::input_reading()
@@ -85,50 +85,56 @@ void ShipMovement::altitude_delta()
 
 void ShipMovement::boost_delta()
 {
-    float target_speed = 0.0f;
-
-
+    // Update speed directly based on input
     if (!movement_vector_.IsZero())
     {
         if (Input::GetActionState(INPUT_BOOST) == InputActionState::Pressing)
         {
-            target_speed = ship_stats_->ship_base_speed * ship_stats_->boost_speed_multiplier;
+            ship_speed_ = ship_stats_->ship_base_speed * ship_stats_->boost_speed_multiplier;
         }
         else
         {
-            target_speed = ship_stats_->ship_base_speed;
+            ship_speed_ = ship_stats_->ship_base_speed;
         }
     }
-    
-
-    ship_speed_ = Math::Lerp(ship_speed_, target_speed, ship_stats_->ship_speed_smoothing * Time::GetDeltaTime());
+    else
+    {
+        ship_speed_ = 0.0f; // No movement input, no speed
+    }
 }
 
 void ShipMovement::move(const Vector3& direction, const float& speed)
 {
     const Matrix ship_transform = ship_actor->GetTransform().GetWorld();
-
-    //DebugLog::Log(LogType::Info, String::Format(TEXT("move: {0}"), direction));
-
-    Vector3 movement_direction;
-
+    Vector3 target_velocity = Vector3::Zero;
 
     if (!direction.IsZero())
     {
-        // Transform the input direction to world space
-        Vector3::TransformNormal(direction, ship_transform, movement_direction);
-        movement_direction.Normalize();
-        last_movement_direction_ = movement_direction; // Cache the last valid direction
+        // Transform the direction into world space
+        Vector3 transformed_direction;
+        Vector3::TransformNormal(direction, ship_transform, transformed_direction);
+        transformed_direction.Normalize();
+
+        // Compute the target velocity
+        target_velocity = transformed_direction * speed;
     }
-    else
+
+    // Determine smoothing factor based on input presence
+    const float smoothing_factor = direction.IsZero()
+        ? ship_stats_->ship_deceleration_smoothing // No input, decelerating
+        : ship_stats_->ship_acceleration_smoothing; // Input present, accelerating
+
+    // Smoothly interpolate current velocity towards the target velocity
+    current_velocity_ = Vector3::Lerp(current_velocity_, target_velocity, smoothing_factor * Time::GetDeltaTime());
+
+    // Apply movement
+    character_controller->Move(current_velocity_ * Time::GetDeltaTime());
+
+    // Update the last movement direction
+    if (!current_velocity_.IsZero())
     {
-        // Use the last known direction for deceleration
-        movement_direction = last_movement_direction_;
+        last_movement_direction_ = current_velocity_.GetNormalized();
     }
-
-    //DebugLog::Log(LogType::Info, String::Format(TEXT("move: {0}"), movement_direction));
-
-    character_controller->Move(movement_direction * speed * Time::GetDeltaTime());
 
 }
 

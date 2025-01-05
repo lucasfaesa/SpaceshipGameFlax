@@ -3,6 +3,6 @@
 	"TypeName": "Game.TodoJA",
 	"EngineBuild": 6605,
 	"Data": {
-	"todos": "particles, planets, skybox, mothership, lerp speed, lerp strafe, implement more method in ship script"
+	"todos": "particles, planets, skybox, mothership,"
 }
 }

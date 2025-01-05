@@ -9,8 +9,8 @@ namespace Game;
 /// </summary>
 public partial class ShipMovement : Script
 {
-    public float ReturnShipSpeed
+    public Vector3 ReturnShipVelocity
     {
-        get { return GetShipSpeed(); }
+        get { return GetShipCurrentVelocity(); }
     }
 }

@@ -225,8 +225,9 @@
 			"TypeName": "Game.DebugUIController",
 			"ParentID": "bb82f1f7455295631b4dfcbf309bf176",
 			"V": {
-	"speedLabel": "3d466382420aff0e724225b2d289c77e",
-	"shipMovement": "64fb037c48d9272579402d8e79736d46"
+	"shipMovement": "64fb037c48d9272579402d8e79736d46",
+	"velocityVector": "3d466382420aff0e724225b2d289c77e",
+	"velocityMagnitude": "55bfee8d415fc6fa67bf1989dc2f641c"
 }
 		},
 		{
@@ -334,7 +335,7 @@
 			"ID": "3d466382420aff0e724225b2d289c77e",
 			"TypeName": "FlaxEngine.UIControl",
 			"ParentID": "59ad3e47435bda97675ed4bccfb88f3a",
-			"Name": "Label",
+			"Name": "VelocityVector",
 			"Transform": {
 				"Translation": {
 					"X": 8.932403564453125,
@@ -344,7 +345,7 @@
 			},
 			"Control": "FlaxEngine.GUI.Label",
 			"Data": {
-	"Text": "Speed:",
+	"Text": "Velocity:",
 	"CaseOption": 0,
 	"Bold": false,
 	"Italic": false,
@@ -395,7 +396,7 @@
 	},
 	"Offsets": {
 		"Left": 8.932404,
-		"Right": 195.79199,
+		"Right": 565.2754,
 		"Top": 9.864815,
 		"Bottom": 43.459267
 	},
@@ -404,8 +405,102 @@
 		"Y": 1.0
 	},
 	"Pivot": {
-		"X": 0.5,
-		"Y": 0.5
+		"X": 0.0,
+		"Y": 0.0
+	},
+	"Shear": {
+		"X": 0.0,
+		"Y": 0.0
+	},
+	"Rotation": 0.0,
+	"BackgroundColor": {
+		"R": 0.0,
+		"G": 0.0,
+		"B": 0.0,
+		"A": 0.55
+	},
+	"BackgroundBrush": null,
+	"Enabled": true,
+	"Visible": true,
+	"AutoFocus": false
+}
+		},
+		{
+			"ID": "55bfee8d415fc6fa67bf1989dc2f641c",
+			"TypeName": "FlaxEngine.UIControl",
+			"ParentID": "59ad3e47435bda97675ed4bccfb88f3a",
+			"Name": "VelocityMagnitude",
+			"Transform": {
+				"Translation": {
+					"X": 8.932403564453125,
+					"Y": 62.64811325073242,
+					"Z": 0.0
+				}
+			},
+			"Control": "FlaxEngine.GUI.Label",
+			"Data": {
+	"Text": "Magnitude:",
+	"CaseOption": 0,
+	"Bold": false,
+	"Italic": false,
+	"TextColor": {
+		"R": 0.8708172,
+		"G": 1.0,
+		"B": 0.0,
+		"A": 1.0
+	},
+	"TextColorHighlighted": {
+		"R": 1.0,
+		"G": 1.0,
+		"B": 1.0,
+		"A": 1.0
+	},
+	"HorizontalAlignment": 0,
+	"VerticalAlignment": 1,
+	"Wrapping": 0,
+	"BaseLinesGapScale": 1.0,
+	"Font": {
+		"Font": "4508d98f4aa1f0bd59362b81d47e38f4",
+		"Size": 21.0
+	},
+	"Material": null,
+	"Margin": {
+		"Left": 0.0,
+		"Right": 0.0,
+		"Top": 0.0,
+		"Bottom": 0.0
+	},
+	"ClipText": false,
+	"AutoWidth": false,
+	"AutoHeight": false,
+	"AutoFitText": false,
+	"AutoFitTextRange": {
+		"X": 0.1,
+		"Y": 100.0
+	},
+	"ClipChildren": true,
+	"CullChildren": true,
+	"AnchorMin": {
+		"X": 0.0,
+		"Y": 0.0
+	},
+	"AnchorMax": {
+		"X": 0.0,
+		"Y": 0.0
+	},
+	"Offsets": {
+		"Left": 8.932404,
+		"Right": 303.31363,
+		"Top": 62.648113,
+		"Bottom": 43.459267
+	},
+	"Scale": {
+		"X": 1.0,
+		"Y": 1.0
+	},
+	"Pivot": {
+		"X": 0.0,
+		"Y": 0.0
 	},
 	"Shear": {
 		"X": 0.0,
