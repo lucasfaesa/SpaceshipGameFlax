@@ -37,7 +37,8 @@ private:
     void get_axis_input();
     void move(const Vector3& direction, const float& speed);
     void mouse_look();
-
+    void altitude_delta();
+    void boost_delta();
 
 private:
     ShipStatsJA* ship_stats_ = nullptr;
