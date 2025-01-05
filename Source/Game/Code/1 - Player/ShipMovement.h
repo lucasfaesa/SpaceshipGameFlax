@@ -35,17 +35,25 @@ private:
     void input_reading();
     void get_keys_input();
     void get_axis_input();
-    void move(const Vector3& direction, const float& speed) const;
+    void move(const Vector3& direction, const float& speed);
     void mouse_look();
 
 
 private:
     ShipStatsJA* ship_stats_ = nullptr;
 
+
     Vector3 movement_vector_ = Vector3::Zero;
+	Vector3 last_movement_direction_ = Vector3::Zero;
+
     Vector2 mouse_delta_ = Vector2::Zero;
     float yaw_ = 0.f;
     float pitch_ = 0.f;
 
     float ship_speed_ = 0.f;
+
+
+    //properties to be exposed to C# script
+public:
+    API_FUNCTION() float GetShipSpeed() const { return ship_speed_; }
 };

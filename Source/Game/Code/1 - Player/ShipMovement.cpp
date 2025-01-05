@@ -35,7 +35,7 @@ void ShipMovement::OnStart()
     {
         _tickUpdate = true;
         ship_stats_ = ship_stats_JA_asset.GetInstance();
-        ship_speed_ = ship_stats_->ship_base_speed;
+        last_movement_direction_ = ship_actor->GetTransform().GetWorld().GetForward(); // Initialize to forward
     }
 }
 
@@ -79,32 +79,43 @@ void ShipMovement::get_keys_input()
     mouse_delta_ = Vector2(Input::GetAxis(TEXT("Mouse X")), Input::GetAxis(TEXT("Mouse Y")));
 
 
+    float target_speed = 0.0f;
+
     if (Input::GetActionState(INPUT_BOOST) == InputActionState::Pressing)
     {
-        ship_speed_ = ship_stats_->ship_base_speed * ship_stats_->boost_speed_multiplier;
+        target_speed = ship_stats_->ship_base_speed * ship_stats_->boost_speed_multiplier;
     }
-	else
+	else if (!movement_vector_.IsZero())
     {
-        ship_speed_ = ship_stats_->ship_base_speed;
+        target_speed = ship_stats_->ship_base_speed;
     }
-    DebugLog::Log(LogType::Info, String::Format(TEXT("Speed: {0}"), ship_speed_));
 
-    //DebugLog::Log(LogType::Info, String::Format(TEXT("Mouse delta X:{0}, Y:{1}"), mouse_delta.X, mouse_delta.Y));
+    ship_speed_ = Math::Lerp(ship_speed_, target_speed, ship_stats_->ship_speed_smoothing * Time::GetDeltaTime());
+
+    //DebugLog::Log(LogType::Info, String::Format(TEXT("Speed:{0}"), ship_speed_));
 }
 
-void ShipMovement::move(const Vector3& direction, const float& speed) const
+void ShipMovement::move(const Vector3& direction, const float& speed)
 {
     const Matrix ship_transform = ship_actor->GetTransform().GetWorld();
 
     Vector3 movement_direction;
 
-    //this makes the character controller to follow the ships forward
-    Vector3::TransformNormal(direction, ship_transform, movement_direction);
-
-    if (!movement_vector_.IsZero())
+    if (!direction.IsZero())
+    {
+        // Transform the input direction to world space
+        Vector3::TransformNormal(direction, ship_transform, movement_direction);
         movement_direction.Normalize();
+        last_movement_direction_ = movement_direction; // Cache the last valid direction
+    }
+    else
+    {
+        // Use the last known direction for deceleration
+        movement_direction = last_movement_direction_;
+    }
 
     character_controller->Move(movement_direction * speed * Time::GetDeltaTime());
+    DebugLog::Log(LogType::Info, String::Format(TEXT("Speed:{0}"), speed));
 }
 
 void ShipMovement::mouse_look()

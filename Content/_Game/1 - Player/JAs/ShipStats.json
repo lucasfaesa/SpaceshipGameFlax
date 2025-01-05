@@ -5,12 +5,13 @@
 	"Data": {
 	"ship_base_speed": 500.0,
 	"boost_speed_multiplier": 2.0,
-	"mouse_sensitivity": 5.0,
 	"max_pitch": {
 		"X": -45.0,
 		"Y": 45.0
 	},
+	"mouse_sensitivity": 5.0,
 	"camera_smoothing": 3.0,
+	"ship_speed_smoothing": 1.0,
 	"ship_turn_smoothing": 10.0,
 	"ship_strafe_smoothing": 10.0
 }

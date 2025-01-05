@@ -16,10 +16,14 @@ public:
 
     API_FIELD(Attributes = "EditorDisplay(\"Data\")") float ship_base_speed = 10.f;
     API_FIELD(Attributes = "EditorDisplay(\"Data\")") float boost_speed_multiplier = 2.f;
-    API_FIELD(Attributes = "EditorDisplay(\"Data\")") float mouse_sensitivity = 5.f;
     API_FIELD(Attributes = "EditorDisplay(\"Data\")") Vector2 max_pitch;
-    API_FIELD(Attributes = "EditorDisplay(\"Data\")") float camera_smoothing = 10.f;
-    API_FIELD(Attributes = "EditorDisplay(\"Data\")") float ship_turn_smoothing = 10.f;
-    API_FIELD(Attributes = "EditorDisplay(\"Data\")") float ship_strafe_smoothing = 10.f;
 
+    API_FIELD(Attributes = "EditorDisplay(\"Mouse\")") float mouse_sensitivity = 5.f;
+    API_FIELD(Attributes = "EditorDisplay(\"Mouse\")") float camera_smoothing = 10.f;
+
+    API_FIELD(Attributes = "EditorDisplay(\"Smoothing\")") float ship_speed_smoothing = 10.f;
+    API_FIELD(Attributes = "EditorDisplay(\"Smoothing\")") float ship_turn_smoothing = 10.f;
+    API_FIELD(Attributes = "EditorDisplay(\"Smoothing\")") float ship_strafe_smoothing = 10.f;
+
+    API_FIELD(Attributes = "EditorDisplay(\"Smoothing\")") float debug = 10.f;
 };
