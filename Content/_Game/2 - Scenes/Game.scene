@@ -94,13 +94,6 @@
 			"TypeName": "FlaxEngine.CharacterController",
 			"ParentID": "c98c381648821a3e37ab2586e063813b",
 			"Name": "CharacterController",
-			"Transform": {
-				"Translation": {
-					"X": 9.35205078125,
-					"Y": 66.30482482910156,
-					"Z": -96.73684692382813
-				}
-			},
 			"Radius": 77.0,
 			"Height": 0.0,
 			"NonWalkableMode": 1
@@ -142,6 +135,52 @@
 					}
 				]
 			}
+		},
+		{
+			"ID": "c4488a434b0e2908ed4436b3298daec9",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "ee18318f47ebaf65c68762b6f43918b5",
+			"Name": "Trails"
+		},
+		{
+			"ID": "f2ddb70e429f00a550f4ab9526c7f92c",
+			"TypeName": "FlaxEngine.ParticleEffect",
+			"ParentID": "c4488a434b0e2908ed4436b3298daec9",
+			"Name": "TrailEffectLeft",
+			"Transform": {
+				"Translation": {
+					"X": -2332.959716796875,
+					"Y": 810.4318237304688,
+					"Z": -223.13058471679688
+				},
+				"Scale": {
+					"X": 33.33333969116211,
+					"Y": 33.33333969116211,
+					"Z": 33.33333969116211
+				}
+			},
+			"Overrides": [],
+			"ParticleSystem": "98b45f9e46e8ba9417cb5090d38ae568"
+		},
+		{
+			"ID": "41ae1c704eedfe974ebc208a81ae2b3e",
+			"TypeName": "FlaxEngine.ParticleEffect",
+			"ParentID": "c4488a434b0e2908ed4436b3298daec9",
+			"Name": "TrailEffectRight",
+			"Transform": {
+				"Translation": {
+					"X": 2332.959716796875,
+					"Y": 810.4318237304688,
+					"Z": -223.13058471679688
+				},
+				"Scale": {
+					"X": 33.33333969116211,
+					"Y": 33.33333969116211,
+					"Z": 33.33333969116211
+				}
+			},
+			"Overrides": [],
+			"ParticleSystem": "98b45f9e46e8ba9417cb5090d38ae568"
 		},
 		{
 			"ID": "d32bab9247a885d6965addace1b47e69",
