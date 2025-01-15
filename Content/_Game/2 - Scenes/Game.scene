@@ -137,9 +137,15 @@
 			}
 		},
 		{
-			"ID": "c4488a434b0e2908ed4436b3298daec9",
+			"ID": "315925414ebbb43093e504bf87150ee6",
 			"TypeName": "FlaxEngine.EmptyActor",
 			"ParentID": "ee18318f47ebaf65c68762b6f43918b5",
+			"Name": "Effects"
+		},
+		{
+			"ID": "c4488a434b0e2908ed4436b3298daec9",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "315925414ebbb43093e504bf87150ee6",
 			"Name": "Trails"
 		},
 		{
@@ -181,6 +187,92 @@
 			},
 			"Overrides": [],
 			"ParticleSystem": "98b45f9e46e8ba9417cb5090d38ae568"
+		},
+		{
+			"ID": "355b23b240a56314d98dedb56d4d9822",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "315925414ebbb43093e504bf87150ee6",
+			"Name": "JetEngineParticle"
+		},
+		{
+			"ID": "78c17cfe430abd2d0292f596195c218a",
+			"TypeName": "FlaxEngine.ParticleEffect",
+			"ParentID": "355b23b240a56314d98dedb56d4d9822",
+			"Name": "JetEngineEffectLeft",
+			"Transform": {
+				"Translation": {
+					"X": -326.684814453125,
+					"Y": 1235.31298828125,
+					"Z": -2321.874755859375
+				}
+			},
+			"Overrides": [],
+			"ParticleSystem": "6bebe55e496a27147c893581cb357366"
+		},
+		{
+			"ID": "9d04d831491ec7247ebc9d92dc09ef01",
+			"TypeName": "FlaxEngine.ParticleEffect",
+			"ParentID": "355b23b240a56314d98dedb56d4d9822",
+			"Name": "JetEngineEffectRight",
+			"Transform": {
+				"Translation": {
+					"X": 335.466796875,
+					"Y": 1235.31298828125,
+					"Z": -2321.874755859375
+				}
+			},
+			"Overrides": [],
+			"ParticleSystem": "6bebe55e496a27147c893581cb357366"
+		},
+		{
+			"ID": "831ca9854f9e27e88e9c51be02f8057c",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "315925414ebbb43093e504bf87150ee6",
+			"Name": "Lights"
+		},
+		{
+			"ID": "ad6c33dd460ac52c0020b7b570c4eed6",
+			"TypeName": "FlaxEngine.PointLight",
+			"ParentID": "831ca9854f9e27e88e9c51be02f8057c",
+			"Name": "PointLightLeft",
+			"Transform": {
+				"Translation": {
+					"X": -371.38037109375,
+					"Y": 1242.046142578125,
+					"Z": -2364.255615234375
+				}
+			},
+			"Color": {
+				"R": 0.3508790135383606,
+				"G": 0.9255487322807312,
+				"B": 1.0,
+				"A": 1.0
+			},
+			"Brightness": 7.040000915527344,
+			"ViewDistance": 190.0,
+			"ShadowsMode": 0
+		},
+		{
+			"ID": "6682653c46df07c2b59304bce015aa30",
+			"TypeName": "FlaxEngine.PointLight",
+			"ParentID": "831ca9854f9e27e88e9c51be02f8057c",
+			"Name": "PointLightRight",
+			"Transform": {
+				"Translation": {
+					"X": 354.00848388671877,
+					"Y": 1242.046142578125,
+					"Z": -2364.255615234375
+				}
+			},
+			"Color": {
+				"R": 0.3508790135383606,
+				"G": 0.9255487322807312,
+				"B": 1.0,
+				"A": 1.0
+			},
+			"Brightness": 7.040000915527344,
+			"ViewDistance": 190.0,
+			"ShadowsMode": 0
 		},
 		{
 			"ID": "d32bab9247a885d6965addace1b47e69",
@@ -243,6 +335,13 @@
 			"TypeName": "FlaxEngine.UIControl",
 			"ParentID": "bb82f1f7455295631b4dfcbf309bf176",
 			"Name": "Canvas Scalar",
+			"Transform": {
+				"Translation": {
+					"X": 1.0,
+					"Y": 0.0,
+					"Z": 0.0
+				}
+			},
 			"Control": "FlaxEngine.GUI.CanvasScaler",
 			"Data": {
 	"ResolutionCurve": {
@@ -309,8 +408,8 @@
 		"Y": 1.0
 	},
 	"Offsets": {
-		"Left": 0.0,
-		"Right": 0.0,
+		"Left": 1.0,
+		"Right": -1.0,
 		"Top": 0.0,
 		"Bottom": 0.0
 	},
