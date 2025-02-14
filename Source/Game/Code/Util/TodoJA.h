@@ -17,4 +17,5 @@ API_CLASS() class GAME_API TodoJA : public ISerializable
 public:
     // Custom float value.
     API_FIELD(Attributes = "MultilineText") String todos ;
+    API_FIELD(Attributes = "MultilineText") String basicConcept ;
 };
