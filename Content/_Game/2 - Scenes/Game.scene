@@ -300,6 +300,14 @@
 			}
 		},
 		{
+			"ID": "01ee2cb947171f1e3526a39ddee5efcd",
+			"TypeName": "Game.CameraEffects",
+			"ParentID": "140d048b4731f812289b0482192a1971",
+			"ship_stats_JA_asset": "38e557b24600187c879c7f829b51acfe",
+			"character_controller": "64fb037c48d9272579402d8e79736d46",
+			"camera": "140d048b4731f812289b0482192a1971"
+		},
+		{
 			"ID": "a2fecaa241676b4a5506d1aae1f58655",
 			"TypeName": "FlaxEngine.AudioListener",
 			"ParentID": "140d048b4731f812289b0482192a1971",

@@ -24,4 +24,7 @@ public:
     API_FIELD(Attributes = "EditorDisplay(\"Smoothing\")") float ship_acceleration_smoothing = 3.f;
     API_FIELD(Attributes = "EditorDisplay(\"Smoothing\")") float ship_deceleration_smoothing = 1.f;
     API_FIELD(Attributes = "EditorDisplay(\"Smoothing\")") float ship_turn_smoothing = 10.f;
+
+    API_FIELD(Attributes = "EditorDisplay(\"Smoothing\")") float min_ship_fov = 60.f;
+    API_FIELD(Attributes = "EditorDisplay(\"Smoothing\")") float max_ship_fov = 90.f;
 };
