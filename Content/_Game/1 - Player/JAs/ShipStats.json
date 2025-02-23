@@ -13,6 +13,11 @@
 	"camera_smoothing": 3.0,
 	"ship_acceleration_smoothing": 1.3,
 	"ship_deceleration_smoothing": 0.25,
-	"ship_turn_smoothing": 8.0
+	"ship_turn_smoothing": 8.0,
+	"min_ship_fov": 60.0,
+	"max_ship_fov": 90.0,
+	"shake_intensity": 0.6,
+	"shake_wind_up_time": 1.0,
+	"shake_wind_down_time": 1.0
 }
 }

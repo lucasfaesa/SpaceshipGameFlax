@@ -21,15 +21,23 @@ DECLARE_SCRIPTING_TYPE(CameraEffects);
 
 private:
 
+    float shipCurrentVelocity = 0;
     float shipMinVelocity = 0;
     float shipMaxVelocity = 0;
     float shipMinFov = 0;
     float shipMaxFov = 0;
 
+    float camera_shake_intensity;
+    float camera_shake_ship_speed_threshold = 0.9f; //when reaching 90% of max speed, will shake
+
+    Vector3 cameraOriginalPos;
+
     ShipStatsJA* ship_stats_ = nullptr;
 
     float CalculateFov();
     void UpdateCameraFov();
+    void ApplyCameraShake() const;
+    void UpdateCameraShakeStrength();
 
     float current_camera_FOV = 60;
 };

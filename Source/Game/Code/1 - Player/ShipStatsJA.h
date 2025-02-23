@@ -25,6 +25,10 @@ public:
     API_FIELD(Attributes = "EditorDisplay(\"Smoothing\")") float ship_deceleration_smoothing = 1.f;
     API_FIELD(Attributes = "EditorDisplay(\"Smoothing\")") float ship_turn_smoothing = 10.f;
 
-    API_FIELD(Attributes = "EditorDisplay(\"Smoothing\")") float min_ship_fov = 60.f;
-    API_FIELD(Attributes = "EditorDisplay(\"Smoothing\")") float max_ship_fov = 90.f;
+    API_FIELD(Attributes = "EditorDisplay(\"Camera Effects\")") float min_ship_fov = 60.f;
+    API_FIELD(Attributes = "EditorDisplay(\"Camera Effects\")") float max_ship_fov = 90.f;
+    API_FIELD(Attributes = "EditorDisplay(\"Camera Effects\")") float shake_intensity = 0.5f;
+    API_FIELD(Attributes = "EditorDisplay(\"Camera Effects\")") float shake_wind_up_time = 1.f;
+    API_FIELD(Attributes = "EditorDisplay(\"Camera Effects\")") float shake_wind_down_time = 1.f;
+
 };
