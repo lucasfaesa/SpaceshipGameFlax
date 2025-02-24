@@ -53,6 +53,7 @@ private:
 
     float ship_speed_ = 0.f;
 
+    float stop_lerp_threshold = 3.f;
 
     //properties to be exposed to C# script
 public:

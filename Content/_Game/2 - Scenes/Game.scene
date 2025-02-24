@@ -305,13 +305,37 @@
 			"ParentID": "140d048b4731f812289b0482192a1971",
 			"ship_stats_JA_asset": "38e557b24600187c879c7f829b51acfe",
 			"character_controller": "64fb037c48d9272579402d8e79736d46",
-			"camera": "140d048b4731f812289b0482192a1971"
+			"camera": "140d048b4731f812289b0482192a1971",
+			"speed_lines_particle": "292d09b049c98740920e728c723c389f"
 		},
 		{
 			"ID": "a2fecaa241676b4a5506d1aae1f58655",
 			"TypeName": "FlaxEngine.AudioListener",
 			"ParentID": "140d048b4731f812289b0482192a1971",
 			"Name": "Audio Listener"
+		},
+		{
+			"ID": "47037e3646dee57731c674ad88d32ed1",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "140d048b4731f812289b0482192a1971",
+			"Name": "Effects"
+		},
+		{
+			"ID": "292d09b049c98740920e728c723c389f",
+			"TypeName": "FlaxEngine.ParticleEffect",
+			"ParentID": "47037e3646dee57731c674ad88d32ed1",
+			"Name": "SpeedParticles",
+			"Transform": {
+				"Translation": {
+					"X": 0.0,
+					"Y": 28.551254272460939,
+					"Z": 932.2603149414063
+				}
+			},
+			"Overrides": [],
+			"ParticleSystem": "d76f09904893c9a5660ccc96d8feacf1",
+			"PlayOnStart": false,
+			"UpdateWhenOffscreen": false
 		},
 		{
 			"ID": "bb82f1f7455295631b4dfcbf309bf176",

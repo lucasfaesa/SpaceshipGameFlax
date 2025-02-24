@@ -3,6 +3,7 @@
 #include <stdexcept>
 
 #include "Engine/Core/Random.h"
+#include "Engine/Particles/ParticleEffect.h"
 
 CameraEffects::CameraEffects(const SpawnParams& params)
     : Script(params)
@@ -12,7 +13,7 @@ CameraEffects::CameraEffects(const SpawnParams& params)
 
 void CameraEffects::OnStart()
 {
-    if (!character_controller || !camera || !ship_stats_JA_asset)
+    if (!character_controller || !camera || !ship_stats_JA_asset || !speed_lines_particle)
     {
         throw std::runtime_error("Missing refs");
     }
@@ -25,6 +26,7 @@ void CameraEffects::OnStart()
         shipMinFov = ship_stats_->min_ship_fov;
         shipMaxFov = ship_stats_->max_ship_fov;
         camera_shake_intensity = 0;
+        stop_speed_lines_delay = static_cast<float>(speed_lines_particle->GetParameterValue(speed_lines_emitter, speed_lines_spawn_rate_parameter));
 
         cameraOriginalPos = camera->GetPosition();
     }
@@ -46,7 +48,7 @@ void CameraEffects::OnUpdate()
 
     UpdateCameraShakeStrength();
     ApplyCameraShake();
-
+    UpdateSpeedLinesParticle();
     //DebugLog::Log(LogType::Info, String::Format(TEXT("vel: {0} thrsh{1}"), shipCurrentVelocity, shipMaxVelocity * camera_shake_ship_speed_threshold));
 
 }
@@ -99,4 +101,31 @@ void CameraEffects::UpdateCameraShakeStrength()
         // Wind down effect
         camera_shake_intensity = Math::Max(camera_shake_intensity - delta / ship_stats_->shake_wind_down_time, 0.0f);
     }
+}
+
+void CameraEffects::UpdateSpeedLinesParticle()
+{
+    const float threshold = shipMaxVelocity * speed_lines_ship_speed_threshold;
+    
+    if (shipCurrentVelocity > threshold)
+    {
+        // Reset timer and play the particle system if the velocity is above threshold
+        stop_speed_lines_timer = 0.f;
+        speed_lines_particle->Play();
+        speed_lines_particle->SetParameterValue(speed_lines_emitter, speed_lines_spawn_rate_parameter, 100.f);
+    }
+    else
+    {
+        // Increase timer if below threshold
+        stop_speed_lines_timer += Time::GetDeltaTime();
+        // Optionally reduce spawn rate immediately if desired:
+        speed_lines_particle->SetParameterValue(speed_lines_emitter, speed_lines_spawn_rate_parameter, 0.f);
+
+        // Only stop after the delay has elapsed
+        if (stop_speed_lines_timer >= stop_speed_lines_delay)
+        {
+            speed_lines_particle->Stop();
+        }
+    }
+    
 }

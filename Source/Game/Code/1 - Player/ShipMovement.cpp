@@ -127,6 +127,11 @@ void ShipMovement::move(const Vector3& direction, const float& speed)
     // Smoothly interpolate current velocity towards the target velocity
     current_velocity_ = Vector3::Lerp(current_velocity_, target_velocity, smoothing_factor * Time::GetDeltaTime());
 
+    if (current_velocity_ - target_velocity < stop_lerp_threshold)
+    {
+        current_velocity_ = target_velocity;
+    }
+
     // Apply movement
     character_controller->Move(current_velocity_ * Time::GetDeltaTime());
 
