@@ -75,6 +75,14 @@
 			"MouseButton": 0,
 			"GamepadButton": 12,
 			"Gamepad": -1
+		},
+		{
+			"Name": "Brake",
+			"Mode": 1,
+			"Key": 82,
+			"MouseButton": 0,
+			"GamepadButton": 10,
+			"Gamepad": -1
 		}
 	],
 	"AxisMappings": [

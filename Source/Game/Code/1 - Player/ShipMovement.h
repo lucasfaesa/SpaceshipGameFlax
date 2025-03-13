@@ -13,6 +13,7 @@ constexpr auto INPUT_VERTICAL = TEXT("Vertical");
 constexpr auto INPUT_INCREASE_ALTITUDE = TEXT("IncreaseAltitude");
 constexpr auto INPUT_DECREASE_ALTITUDE = TEXT("DecreaseAltitude");
 constexpr auto INPUT_BOOST = TEXT("Boost");
+constexpr auto INPUT_BRAKE = TEXT("Brake");
 
 
 API_CLASS() class GAME_API ShipMovement : public Script
@@ -39,6 +40,7 @@ private:
     void mouse_look();
     void altitude_delta();
     void boost_delta();
+    void brake_delta();
 
 private:
     ShipStatsJA* ship_stats_ = nullptr;

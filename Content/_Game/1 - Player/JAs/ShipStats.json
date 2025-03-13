@@ -14,6 +14,7 @@
 	"ship_acceleration_smoothing": 1.3,
 	"ship_deceleration_smoothing": 0.25,
 	"ship_turn_smoothing": 8.0,
+	"ship_brake_deceleration": 3.5,
 	"min_ship_fov": 60.0,
 	"max_ship_fov": 90.0,
 	"shake_intensity": 0.75,

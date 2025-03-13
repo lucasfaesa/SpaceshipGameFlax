@@ -64,6 +64,8 @@ void ShipMovement::get_keys_input()
 
     boost_delta();
 
+    brake_delta();
+
     //DebugLog::Log(LogType::Info, String::Format(TEXT("Speed:{0}"), ship_speed_));
 }
 
@@ -103,6 +105,21 @@ void ShipMovement::boost_delta()
     }
 }
 
+void ShipMovement::brake_delta()
+{
+    if (Input::GetActionState(INPUT_BRAKE) == InputActionState::Pressing)
+    {
+        // Override movement input and speed when braking is active
+        movement_vector_ = Vector3::Zero;
+        ship_speed_ = 0.0f;
+
+
+        float brakeFactor = ship_stats_->ship_brake_deceleration;
+        current_velocity_ = Vector3::Lerp(current_velocity_, Vector3::Zero, brakeFactor * Time::GetDeltaTime());
+    }
+    
+}
+
 void ShipMovement::move(const Vector3& direction, const float& speed)
 {
     const Matrix ship_transform = ship_actor->GetTransform().GetWorld();
@@ -127,7 +144,8 @@ void ShipMovement::move(const Vector3& direction, const float& speed)
     // Smoothly interpolate current velocity towards the target velocity
     current_velocity_ = Vector3::Lerp(current_velocity_, target_velocity, smoothing_factor * Time::GetDeltaTime());
 
-    if (current_velocity_ - target_velocity < stop_lerp_threshold)
+
+    if ((current_velocity_ - target_velocity).Length() < stop_lerp_threshold)
     {
         current_velocity_ = target_velocity;
     }
