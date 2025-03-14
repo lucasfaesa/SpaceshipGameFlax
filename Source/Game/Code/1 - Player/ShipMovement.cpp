@@ -9,7 +9,7 @@
 ShipMovement::ShipMovement(const SpawnParams& params)
     : Script(params)
 {
-    _tickUpdate = true;
+    _tickUpdate = false;
 }
 
 void ShipMovement::OnEnable()

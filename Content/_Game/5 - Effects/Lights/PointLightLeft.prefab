@@ -1,0 +1,21 @@
+{
+	"ID": "c37c10dc48923ad84d594fbea63cf9a4",
+	"TypeName": "FlaxEngine.Prefab",
+	"EngineBuild": 6605,
+	"Data": [
+	{
+		"ID": "74b9c1b849f217f8fc08c2b7a77d845b",
+		"TypeName": "FlaxEngine.PointLight",
+		"Name": "PointLightLeft",
+		"Color": {
+			"R": 0.3508790135383606,
+			"G": 0.9255487322807312,
+			"B": 1.0,
+			"A": 1.0
+		},
+		"Brightness": 7.040000915527344,
+		"ViewDistance": 190.0,
+		"ShadowsMode": 0
+	}
+]
+}

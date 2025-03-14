@@ -231,30 +231,35 @@
 			"Name": "Lights"
 		},
 		{
-			"ID": "ad6c33dd460ac52c0020b7b570c4eed6",
-			"TypeName": "FlaxEngine.PointLight",
+			"ID": "09e3f11f4b7bdf7477cf9c91de4ceacb",
+			"TypeName": "Game.LightFlicker",
 			"ParentID": "831ca9854f9e27e88e9c51be02f8057c",
-			"Name": "PointLightLeft",
+			"lights": [
+				"ad6c33dd460ac52c0020b7b570c4eed6",
+				"4aa3552a4ed241e584b2b88b3014f6c3"
+			],
+			"min_delay_between_flick": 0.05000000074505806,
+			"max_delay_between_flick": 0.10000000149011612,
+			"minimum_intensity": 7.0,
+			"maximum_intensity": 9.0
+		},
+		{
+			"ID": "ad6c33dd460ac52c0020b7b570c4eed6",
+			"PrefabID": "c37c10dc48923ad84d594fbea63cf9a4",
+			"PrefabObjectID": "74b9c1b849f217f8fc08c2b7a77d845b",
+			"ParentID": "831ca9854f9e27e88e9c51be02f8057c",
 			"Transform": {
 				"Translation": {
 					"X": -371.38037109375,
 					"Y": 1242.046142578125,
 					"Z": -2364.255615234375
 				}
-			},
-			"Color": {
-				"R": 0.3508790135383606,
-				"G": 0.9255487322807312,
-				"B": 1.0,
-				"A": 1.0
-			},
-			"Brightness": 7.040000915527344,
-			"ViewDistance": 190.0,
-			"ShadowsMode": 0
+			}
 		},
 		{
-			"ID": "6682653c46df07c2b59304bce015aa30",
-			"TypeName": "FlaxEngine.PointLight",
+			"ID": "4aa3552a4ed241e584b2b88b3014f6c3",
+			"PrefabID": "c37c10dc48923ad84d594fbea63cf9a4",
+			"PrefabObjectID": "74b9c1b849f217f8fc08c2b7a77d845b",
 			"ParentID": "831ca9854f9e27e88e9c51be02f8057c",
 			"Name": "PointLightRight",
 			"Transform": {
@@ -263,16 +268,7 @@
 					"Y": 1242.046142578125,
 					"Z": -2364.255615234375
 				}
-			},
-			"Color": {
-				"R": 0.3508790135383606,
-				"G": 0.9255487322807312,
-				"B": 1.0,
-				"A": 1.0
-			},
-			"Brightness": 7.040000915527344,
-			"ViewDistance": 190.0,
-			"ShadowsMode": 0
+			}
 		},
 		{
 			"ID": "d32bab9247a885d6965addace1b47e69",
