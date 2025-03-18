@@ -18,322 +18,6 @@
 			}
 		},
 		{
-			"ID": "1c9aec924f8f52da27fff7ab97f289e6",
-			"TypeName": "FlaxEngine.DirectionalLight",
-			"ParentID": "c98c381648821a3e37ab2586e063813b",
-			"Name": "Sun",
-			"Transform": {
-				"Translation": {
-					"X": 40.0,
-					"Y": 160.0,
-					"Z": 0.0
-				},
-				"Orientation": {
-					"X": 0.44189250469207766,
-					"Y": -0.46806901693344118,
-					"Z": 0.29248231649398806,
-					"W": 0.707175076007843
-				}
-			},
-			"Brightness": 3.140000104904175
-		},
-		{
-			"ID": "f8333a424d24ae10bad430965167a85b",
-			"TypeName": "FlaxEngine.Sky",
-			"ParentID": "c98c381648821a3e37ab2586e063813b",
-			"Name": "Sky",
-			"Transform": {
-				"Translation": {
-					"X": 40.0,
-					"Y": 150.0,
-					"Z": 0.0
-				}
-			},
-			"Sun": "1c9aec924f8f52da27fff7ab97f289e6",
-			"SunDiscScale": 3.9700000286102297
-		},
-		{
-			"ID": "f1b5558a4574d62cf44e1a96fc565773",
-			"TypeName": "FlaxEngine.SkyLight",
-			"ParentID": "c98c381648821a3e37ab2586e063813b",
-			"Name": "SkyLight",
-			"Brightness": 1.0,
-			"CustomTexture": "c54410104ff39427bc11e5bc761d66b0"
-		},
-		{
-			"ID": "cace31ec4d095c42da856ca280a581c7",
-			"TypeName": "FlaxEngine.StaticModel",
-			"ParentID": "c98c381648821a3e37ab2586e063813b",
-			"Name": "Floor",
-			"Transform": {
-				"Translation": {
-					"X": 0.0,
-					"Y": -88.2132568359375,
-					"Z": 0.0
-				},
-				"Scale": {
-					"X": 14610.7783203125,
-					"Y": 1.0,
-					"Z": 14610.7783203125
-				}
-			},
-			"Model": "b43f0f8f4aaba3f3156896a5a22ba493",
-			"Buffer": {
-				"Entries": [
-					{
-						"Material": "68b418a3401918753cfa07b673ccf7d6",
-						"ShadowsMode": 3,
-						"Visible": true,
-						"ReceiveDecals": true
-					}
-				]
-			}
-		},
-		{
-			"ID": "aa5d4e8241dc383e9fcd06b51de402a7",
-			"TypeName": "FlaxEngine.CharacterController",
-			"ParentID": "c98c381648821a3e37ab2586e063813b",
-			"Name": "CharacterController",
-			"Radius": 77.0,
-			"Height": 0.0,
-			"NonWalkableMode": 1
-		},
-		{
-			"ID": "64fb037c48d9272579402d8e79736d46",
-			"TypeName": "Game.ShipMovement",
-			"ParentID": "aa5d4e8241dc383e9fcd06b51de402a7",
-			"ship_stats_JA_asset": "38e557b24600187c879c7f829b51acfe",
-			"character_controller": "aa5d4e8241dc383e9fcd06b51de402a7",
-			"camera_socket": "d32bab9247a885d6965addace1b47e69",
-			"ship_actor": "ee18318f47ebaf65c68762b6f43918b5"
-		},
-		{
-			"ID": "ee18318f47ebaf65c68762b6f43918b5",
-			"TypeName": "FlaxEngine.StaticModel",
-			"ParentID": "aa5d4e8241dc383e9fcd06b51de402a7",
-			"Name": "model",
-			"Transform": {
-				"Translation": {
-					"X": 0.0,
-					"Y": -30.273239135742189,
-					"Z": -16.074615478515626
-				},
-				"Scale": {
-					"X": 0.0299999937415123,
-					"Y": 0.0299999937415123,
-					"Z": 0.0299999937415123
-				}
-			},
-			"Model": "dae7b7654c755bc3fe391dba5cef651b",
-			"Buffer": {
-				"Entries": [
-					{
-						"Material": "00000000000000000000000000000000",
-						"ShadowsMode": 3,
-						"Visible": true,
-						"ReceiveDecals": true
-					}
-				]
-			}
-		},
-		{
-			"ID": "315925414ebbb43093e504bf87150ee6",
-			"TypeName": "FlaxEngine.EmptyActor",
-			"ParentID": "ee18318f47ebaf65c68762b6f43918b5",
-			"Name": "Effects"
-		},
-		{
-			"ID": "c4488a434b0e2908ed4436b3298daec9",
-			"TypeName": "FlaxEngine.EmptyActor",
-			"ParentID": "315925414ebbb43093e504bf87150ee6",
-			"Name": "Trails"
-		},
-		{
-			"ID": "f2ddb70e429f00a550f4ab9526c7f92c",
-			"TypeName": "FlaxEngine.ParticleEffect",
-			"ParentID": "c4488a434b0e2908ed4436b3298daec9",
-			"Name": "TrailEffectLeft",
-			"Transform": {
-				"Translation": {
-					"X": -2332.959716796875,
-					"Y": 810.4318237304688,
-					"Z": -223.13058471679688
-				},
-				"Scale": {
-					"X": 33.33333969116211,
-					"Y": 33.33333969116211,
-					"Z": 33.33333969116211
-				}
-			},
-			"Overrides": [],
-			"ParticleSystem": "98b45f9e46e8ba9417cb5090d38ae568"
-		},
-		{
-			"ID": "41ae1c704eedfe974ebc208a81ae2b3e",
-			"TypeName": "FlaxEngine.ParticleEffect",
-			"ParentID": "c4488a434b0e2908ed4436b3298daec9",
-			"Name": "TrailEffectRight",
-			"Transform": {
-				"Translation": {
-					"X": 2332.959716796875,
-					"Y": 810.4318237304688,
-					"Z": -223.13058471679688
-				},
-				"Scale": {
-					"X": 33.33333969116211,
-					"Y": 33.33333969116211,
-					"Z": 33.33333969116211
-				}
-			},
-			"Overrides": [],
-			"ParticleSystem": "98b45f9e46e8ba9417cb5090d38ae568"
-		},
-		{
-			"ID": "355b23b240a56314d98dedb56d4d9822",
-			"TypeName": "FlaxEngine.EmptyActor",
-			"ParentID": "315925414ebbb43093e504bf87150ee6",
-			"Name": "JetEngineParticle"
-		},
-		{
-			"ID": "78c17cfe430abd2d0292f596195c218a",
-			"TypeName": "FlaxEngine.ParticleEffect",
-			"ParentID": "355b23b240a56314d98dedb56d4d9822",
-			"Name": "JetEngineEffectLeft",
-			"Transform": {
-				"Translation": {
-					"X": -326.684814453125,
-					"Y": 1235.31298828125,
-					"Z": -2321.874755859375
-				}
-			},
-			"Overrides": [],
-			"ParticleSystem": "6bebe55e496a27147c893581cb357366"
-		},
-		{
-			"ID": "9d04d831491ec7247ebc9d92dc09ef01",
-			"TypeName": "FlaxEngine.ParticleEffect",
-			"ParentID": "355b23b240a56314d98dedb56d4d9822",
-			"Name": "JetEngineEffectRight",
-			"Transform": {
-				"Translation": {
-					"X": 335.466796875,
-					"Y": 1235.31298828125,
-					"Z": -2321.874755859375
-				}
-			},
-			"Overrides": [],
-			"ParticleSystem": "6bebe55e496a27147c893581cb357366"
-		},
-		{
-			"ID": "831ca9854f9e27e88e9c51be02f8057c",
-			"TypeName": "FlaxEngine.EmptyActor",
-			"ParentID": "315925414ebbb43093e504bf87150ee6",
-			"Name": "Lights"
-		},
-		{
-			"ID": "09e3f11f4b7bdf7477cf9c91de4ceacb",
-			"TypeName": "Game.LightFlicker",
-			"ParentID": "831ca9854f9e27e88e9c51be02f8057c",
-			"lights": [
-				"ad6c33dd460ac52c0020b7b570c4eed6",
-				"4aa3552a4ed241e584b2b88b3014f6c3"
-			],
-			"min_delay_between_flick": 0.05000000074505806,
-			"max_delay_between_flick": 0.10000000149011612,
-			"minimum_intensity": 7.0,
-			"maximum_intensity": 9.0
-		},
-		{
-			"ID": "ad6c33dd460ac52c0020b7b570c4eed6",
-			"PrefabID": "c37c10dc48923ad84d594fbea63cf9a4",
-			"PrefabObjectID": "74b9c1b849f217f8fc08c2b7a77d845b",
-			"ParentID": "831ca9854f9e27e88e9c51be02f8057c",
-			"Transform": {
-				"Translation": {
-					"X": -371.38037109375,
-					"Y": 1242.046142578125,
-					"Z": -2364.255615234375
-				}
-			}
-		},
-		{
-			"ID": "4aa3552a4ed241e584b2b88b3014f6c3",
-			"PrefabID": "c37c10dc48923ad84d594fbea63cf9a4",
-			"PrefabObjectID": "74b9c1b849f217f8fc08c2b7a77d845b",
-			"ParentID": "831ca9854f9e27e88e9c51be02f8057c",
-			"Name": "PointLightRight",
-			"Transform": {
-				"Translation": {
-					"X": 354.00848388671877,
-					"Y": 1242.046142578125,
-					"Z": -2364.255615234375
-				}
-			}
-		},
-		{
-			"ID": "d32bab9247a885d6965addace1b47e69",
-			"TypeName": "FlaxEngine.EmptyActor",
-			"ParentID": "aa5d4e8241dc383e9fcd06b51de402a7",
-			"Name": "CameraSocket"
-		},
-		{
-			"ID": "140d048b4731f812289b0482192a1971",
-			"TypeName": "FlaxEngine.Camera",
-			"ParentID": "d32bab9247a885d6965addace1b47e69",
-			"Name": "Camera",
-			"Transform": {
-				"Translation": {
-					"X": 0.0,
-					"Y": 90.9544677734375,
-					"Z": -207.4019775390625
-				},
-				"Orientation": {
-					"X": 0.11649109423160553,
-					"Y": 0.0,
-					"Z": 0.0,
-					"W": 0.9931917786598206
-				}
-			}
-		},
-		{
-			"ID": "01ee2cb947171f1e3526a39ddee5efcd",
-			"TypeName": "Game.CameraEffects",
-			"ParentID": "140d048b4731f812289b0482192a1971",
-			"ship_stats_JA_asset": "38e557b24600187c879c7f829b51acfe",
-			"character_controller": "64fb037c48d9272579402d8e79736d46",
-			"camera": "140d048b4731f812289b0482192a1971",
-			"speed_lines_particle": "292d09b049c98740920e728c723c389f"
-		},
-		{
-			"ID": "a2fecaa241676b4a5506d1aae1f58655",
-			"TypeName": "FlaxEngine.AudioListener",
-			"ParentID": "140d048b4731f812289b0482192a1971",
-			"Name": "Audio Listener"
-		},
-		{
-			"ID": "47037e3646dee57731c674ad88d32ed1",
-			"TypeName": "FlaxEngine.EmptyActor",
-			"ParentID": "140d048b4731f812289b0482192a1971",
-			"Name": "Effects"
-		},
-		{
-			"ID": "292d09b049c98740920e728c723c389f",
-			"TypeName": "FlaxEngine.ParticleEffect",
-			"ParentID": "47037e3646dee57731c674ad88d32ed1",
-			"Name": "SpeedParticles",
-			"Transform": {
-				"Translation": {
-					"X": 0.0,
-					"Y": 28.551254272460939,
-					"Z": 932.2603149414063
-				}
-			},
-			"Overrides": [],
-			"ParticleSystem": "d76f09904893c9a5660ccc96d8feacf1",
-			"PlayOnStart": false,
-			"UpdateWhenOffscreen": false
-		},
-		{
 			"ID": "bb82f1f7455295631b4dfcbf309bf176",
 			"TypeName": "FlaxEngine.UICanvas",
 			"ParentID": "c98c381648821a3e37ab2586e063813b",
@@ -749,6 +433,41 @@
 }
 		},
 		{
+			"ID": "1c9aec924f8f52da27fff7ab97f289e6",
+			"TypeName": "FlaxEngine.DirectionalLight",
+			"ParentID": "c98c381648821a3e37ab2586e063813b",
+			"Name": "Sun",
+			"Transform": {
+				"Translation": {
+					"X": 40.0,
+					"Y": 160.0,
+					"Z": 0.0
+				},
+				"Orientation": {
+					"X": 0.44189250469207766,
+					"Y": -0.46806901693344118,
+					"Z": 0.29248231649398806,
+					"W": 0.707175076007843
+				}
+			},
+			"Brightness": 3.140000104904175
+		},
+		{
+			"ID": "f8333a424d24ae10bad430965167a85b",
+			"TypeName": "FlaxEngine.Sky",
+			"ParentID": "c98c381648821a3e37ab2586e063813b",
+			"Name": "Sky",
+			"Transform": {
+				"Translation": {
+					"X": 40.0,
+					"Y": 150.0,
+					"Z": 0.0
+				}
+			},
+			"Sun": "1c9aec924f8f52da27fff7ab97f289e6",
+			"SunDiscScale": 3.9700000286102297
+		},
+		{
 			"ID": "d3eb7f5644f1fdc80d9c46be5777def3",
 			"TypeName": "FlaxEngine.Skybox",
 			"ParentID": "c98c381648821a3e37ab2586e063813b",
@@ -757,10 +476,18 @@
 			"CubeTexture": "c059061e4215b0d653858cb2eab754fd"
 		},
 		{
+			"ID": "f1b5558a4574d62cf44e1a96fc565773",
+			"TypeName": "FlaxEngine.SkyLight",
+			"ParentID": "c98c381648821a3e37ab2586e063813b",
+			"Name": "SkyLight",
+			"Brightness": 1.0,
+			"CustomTexture": "c54410104ff39427bc11e5bc761d66b0"
+		},
+		{
 			"ID": "c025819b4e97520efd5df5b274e08898",
 			"TypeName": "FlaxEngine.PostFxVolume",
 			"ParentID": "c98c381648821a3e37ab2586e063813b",
-			"Name": "PostFxVolume",
+			"Name": "GlobalPostFxVolume",
 			"Priority": 1,
 			"IsBounded": false,
 			"Settings": {
@@ -786,6 +513,310 @@
 				"SSR": {},
 				"AA": {},
 				"PostFxMaterials": {}
+			}
+		},
+		{
+			"ID": "c29040a34674c1f474b4dea7808ceb87",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "c98c381648821a3e37ab2586e063813b",
+			"Name": "Universe",
+			"StaticFlags": 0
+		},
+		{
+			"ID": "e54d00e245b498f984cae982df60d99a",
+			"TypeName": "Game.UniverseToCenter",
+			"ParentID": "c29040a34674c1f474b4dea7808ceb87",
+			"universeActor": "c29040a34674c1f474b4dea7808ceb87",
+			"shipActor": "aa5d4e8241dc383e9fcd06b51de402a7",
+			"shipTrails": [
+				"f2ddb70e429f00a550f4ab9526c7f92c",
+				"41ae1c704eedfe974ebc208a81ae2b3e"
+			]
+		},
+		{
+			"ID": "aa5d4e8241dc383e9fcd06b51de402a7",
+			"TypeName": "FlaxEngine.CharacterController",
+			"ParentID": "c29040a34674c1f474b4dea7808ceb87",
+			"Name": "CharacterController",
+			"StaticFlags": 0,
+			"Radius": 77.0,
+			"Height": 0.0,
+			"NonWalkableMode": 1
+		},
+		{
+			"ID": "64fb037c48d9272579402d8e79736d46",
+			"TypeName": "Game.ShipMovement",
+			"ParentID": "aa5d4e8241dc383e9fcd06b51de402a7",
+			"ship_stats_JA_asset": "38e557b24600187c879c7f829b51acfe",
+			"character_controller": "aa5d4e8241dc383e9fcd06b51de402a7",
+			"camera_socket": "d32bab9247a885d6965addace1b47e69",
+			"ship_actor": "ee18318f47ebaf65c68762b6f43918b5"
+		},
+		{
+			"ID": "ee18318f47ebaf65c68762b6f43918b5",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "aa5d4e8241dc383e9fcd06b51de402a7",
+			"Name": "model",
+			"Transform": {
+				"Translation": {
+					"X": 0.0,
+					"Y": -30.273239135742189,
+					"Z": -16.074615478515626
+				},
+				"Scale": {
+					"X": 0.0299999937415123,
+					"Y": 0.0299999937415123,
+					"Z": 0.0299999937415123
+				}
+			},
+			"StaticFlags": 0,
+			"Model": "dae7b7654c755bc3fe391dba5cef651b",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "315925414ebbb43093e504bf87150ee6",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "ee18318f47ebaf65c68762b6f43918b5",
+			"Name": "Effects",
+			"StaticFlags": 0
+		},
+		{
+			"ID": "c4488a434b0e2908ed4436b3298daec9",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "315925414ebbb43093e504bf87150ee6",
+			"Name": "Trails",
+			"StaticFlags": 0
+		},
+		{
+			"ID": "f2ddb70e429f00a550f4ab9526c7f92c",
+			"TypeName": "FlaxEngine.ParticleEffect",
+			"ParentID": "c4488a434b0e2908ed4436b3298daec9",
+			"Name": "TrailEffectLeft",
+			"Transform": {
+				"Translation": {
+					"X": -2332.959716796875,
+					"Y": 810.4318237304688,
+					"Z": -223.13058471679688
+				},
+				"Scale": {
+					"X": 33.33333969116211,
+					"Y": 33.33333969116211,
+					"Z": 33.33333969116211
+				}
+			},
+			"StaticFlags": 0,
+			"Overrides": [],
+			"ParticleSystem": "98b45f9e46e8ba9417cb5090d38ae568"
+		},
+		{
+			"ID": "41ae1c704eedfe974ebc208a81ae2b3e",
+			"TypeName": "FlaxEngine.ParticleEffect",
+			"ParentID": "c4488a434b0e2908ed4436b3298daec9",
+			"Name": "TrailEffectRight",
+			"Transform": {
+				"Translation": {
+					"X": 2332.959716796875,
+					"Y": 810.4318237304688,
+					"Z": -223.13058471679688
+				},
+				"Scale": {
+					"X": 33.33333969116211,
+					"Y": 33.33333969116211,
+					"Z": 33.33333969116211
+				}
+			},
+			"StaticFlags": 0,
+			"Overrides": [],
+			"ParticleSystem": "98b45f9e46e8ba9417cb5090d38ae568"
+		},
+		{
+			"ID": "355b23b240a56314d98dedb56d4d9822",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "315925414ebbb43093e504bf87150ee6",
+			"Name": "JetEngineParticle",
+			"StaticFlags": 0
+		},
+		{
+			"ID": "78c17cfe430abd2d0292f596195c218a",
+			"TypeName": "FlaxEngine.ParticleEffect",
+			"ParentID": "355b23b240a56314d98dedb56d4d9822",
+			"Name": "JetEngineEffectLeft",
+			"Transform": {
+				"Translation": {
+					"X": -326.684814453125,
+					"Y": 1235.31298828125,
+					"Z": -2321.874755859375
+				}
+			},
+			"StaticFlags": 0,
+			"Overrides": [],
+			"ParticleSystem": "6bebe55e496a27147c893581cb357366"
+		},
+		{
+			"ID": "9d04d831491ec7247ebc9d92dc09ef01",
+			"TypeName": "FlaxEngine.ParticleEffect",
+			"ParentID": "355b23b240a56314d98dedb56d4d9822",
+			"Name": "JetEngineEffectRight",
+			"Transform": {
+				"Translation": {
+					"X": 335.466796875,
+					"Y": 1235.31298828125,
+					"Z": -2321.874755859375
+				}
+			},
+			"StaticFlags": 0,
+			"Overrides": [],
+			"ParticleSystem": "6bebe55e496a27147c893581cb357366"
+		},
+		{
+			"ID": "831ca9854f9e27e88e9c51be02f8057c",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "315925414ebbb43093e504bf87150ee6",
+			"Name": "Lights",
+			"StaticFlags": 0
+		},
+		{
+			"ID": "09e3f11f4b7bdf7477cf9c91de4ceacb",
+			"TypeName": "Game.LightFlicker",
+			"ParentID": "831ca9854f9e27e88e9c51be02f8057c",
+			"min_delay_between_flick": 2.305174463790714e30,
+			"max_delay_between_flick": -133649992.0,
+			"minimum_intensity": 7.0,
+			"maximum_intensity": 9.0
+		},
+		{
+			"ID": "ad6c33dd460ac52c0020b7b570c4eed6",
+			"PrefabID": "c37c10dc48923ad84d594fbea63cf9a4",
+			"PrefabObjectID": "74b9c1b849f217f8fc08c2b7a77d845b",
+			"ParentID": "831ca9854f9e27e88e9c51be02f8057c",
+			"Transform": {
+				"Translation": {
+					"X": -371.38037109375,
+					"Y": 1242.046142578125,
+					"Z": -2364.255615234375
+				}
+			},
+			"StaticFlags": 0
+		},
+		{
+			"ID": "4aa3552a4ed241e584b2b88b3014f6c3",
+			"PrefabID": "c37c10dc48923ad84d594fbea63cf9a4",
+			"PrefabObjectID": "74b9c1b849f217f8fc08c2b7a77d845b",
+			"ParentID": "831ca9854f9e27e88e9c51be02f8057c",
+			"Name": "PointLightRight",
+			"Transform": {
+				"Translation": {
+					"X": 354.00848388671877,
+					"Y": 1242.046142578125,
+					"Z": -2364.255615234375
+				}
+			},
+			"StaticFlags": 0
+		},
+		{
+			"ID": "d32bab9247a885d6965addace1b47e69",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "aa5d4e8241dc383e9fcd06b51de402a7",
+			"Name": "CameraSocket",
+			"StaticFlags": 0
+		},
+		{
+			"ID": "140d048b4731f812289b0482192a1971",
+			"TypeName": "FlaxEngine.Camera",
+			"ParentID": "d32bab9247a885d6965addace1b47e69",
+			"Name": "Camera",
+			"Transform": {
+				"Translation": {
+					"X": 0.0,
+					"Y": 90.9544677734375,
+					"Z": -207.4019775390625
+				},
+				"Orientation": {
+					"X": 0.11649109423160553,
+					"Y": 0.0,
+					"Z": 0.0,
+					"W": 0.9931917786598206
+				}
+			},
+			"StaticFlags": 0
+		},
+		{
+			"ID": "01ee2cb947171f1e3526a39ddee5efcd",
+			"TypeName": "Game.CameraEffects",
+			"ParentID": "140d048b4731f812289b0482192a1971",
+			"ship_stats_JA_asset": "38e557b24600187c879c7f829b51acfe",
+			"character_controller": "64fb037c48d9272579402d8e79736d46",
+			"camera": "140d048b4731f812289b0482192a1971",
+			"speed_lines_particle": "292d09b049c98740920e728c723c389f"
+		},
+		{
+			"ID": "a2fecaa241676b4a5506d1aae1f58655",
+			"TypeName": "FlaxEngine.AudioListener",
+			"ParentID": "140d048b4731f812289b0482192a1971",
+			"Name": "Audio Listener",
+			"StaticFlags": 0
+		},
+		{
+			"ID": "47037e3646dee57731c674ad88d32ed1",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "140d048b4731f812289b0482192a1971",
+			"Name": "Effects",
+			"StaticFlags": 0
+		},
+		{
+			"ID": "292d09b049c98740920e728c723c389f",
+			"TypeName": "FlaxEngine.ParticleEffect",
+			"ParentID": "47037e3646dee57731c674ad88d32ed1",
+			"Name": "SpeedParticles",
+			"Transform": {
+				"Translation": {
+					"X": 0.0,
+					"Y": 28.551254272460939,
+					"Z": 932.2603149414063
+				}
+			},
+			"StaticFlags": 0,
+			"Overrides": [],
+			"ParticleSystem": "d76f09904893c9a5660ccc96d8feacf1",
+			"PlayOnStart": false,
+			"UpdateWhenOffscreen": false
+		},
+		{
+			"ID": "cace31ec4d095c42da856ca280a581c7",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "c29040a34674c1f474b4dea7808ceb87",
+			"Name": "Floor",
+			"Transform": {
+				"Translation": {
+					"X": 0.0,
+					"Y": -89.16343688964844,
+					"Z": 0.0
+				},
+				"Scale": {
+					"X": 3000.0,
+					"Y": 1.0,
+					"Z": 3000.0
+				}
+			},
+			"Model": "b43f0f8f4aaba3f3156896a5a22ba493",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "68b418a3401918753cfa07b673ccf7d6",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
 			}
 		}
 	]
