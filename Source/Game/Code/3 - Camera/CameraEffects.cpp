@@ -4,12 +4,16 @@
 
 #include "Engine/Core/Random.h"
 #include "Engine/Particles/ParticleEffect.h"
+#include "Game/Code/5 - World/UniverseToCenter.h"
+#include "Game/Code/Util/EventHub.h"
 
 CameraEffects::CameraEffects(const SpawnParams& params)
     : Script(params)
 {
     // Enable ticking OnUpdate function
 }
+
+
 
 void CameraEffects::OnStart()
 {
@@ -29,7 +33,16 @@ void CameraEffects::OnStart()
         stop_speed_lines_delay = static_cast<float>(speed_lines_particle->GetParameterValue(speed_lines_emitter, speed_lines_spawn_rate_parameter));
 
         cameraOriginalPos = camera->GetPosition();
+
+        resetWorldEventCallback_ = [this](const std::vector<void*>& args) { Test(args); };
+
+        EventHub::Subscribe(UniverseToCenter::RESET_WORLD_TO_CENTER_EVENT, resetWorldEventCallback_);
     }
+}
+
+void CameraEffects::Test(const std::vector<void*>& args)
+{
+    DebugLog::Log(TEXT("LISTENED TO EVENT"));
 }
 
 void CameraEffects::OnEnable()
@@ -50,6 +63,14 @@ void CameraEffects::OnUpdate()
     ApplyCameraShake();
     UpdateSpeedLinesParticle();
     //DebugLog::Log(LogType::Info, String::Format(TEXT("vel: {0} thrsh{1}"), shipCurrentVelocity, shipMaxVelocity * camera_shake_ship_speed_threshold));
+
+}
+
+void CameraEffects::OnDestroy()
+{
+    DebugLog::Log(TEXT("unsubcribe called"));
+
+    EventHub::Unsubscribe(UniverseToCenter::RESET_WORLD_TO_CENTER_EVENT, resetWorldEventCallback_);
 
 }
 

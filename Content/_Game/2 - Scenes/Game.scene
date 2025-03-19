@@ -527,11 +527,7 @@
 			"TypeName": "Game.UniverseToCenter",
 			"ParentID": "c29040a34674c1f474b4dea7808ceb87",
 			"universeActor": "c29040a34674c1f474b4dea7808ceb87",
-			"shipActor": "aa5d4e8241dc383e9fcd06b51de402a7",
-			"shipTrails": [
-				"f2ddb70e429f00a550f4ab9526c7f92c",
-				"41ae1c704eedfe974ebc208a81ae2b3e"
-			]
+			"shipActor": "aa5d4e8241dc383e9fcd06b51de402a7"
 		},
 		{
 			"ID": "aa5d4e8241dc383e9fcd06b51de402a7",
@@ -595,6 +591,15 @@
 			"ParentID": "315925414ebbb43093e504bf87150ee6",
 			"Name": "Trails",
 			"StaticFlags": 0
+		},
+		{
+			"ID": "36840d654e8d8deeec3411bf778b136c",
+			"TypeName": "Game.ShipTrailsController",
+			"ParentID": "c4488a434b0e2908ed4436b3298daec9",
+			"shipTrails": [
+				"f2ddb70e429f00a550f4ab9526c7f92c",
+				"41ae1c704eedfe974ebc208a81ae2b3e"
+			]
 		},
 		{
 			"ID": "f2ddb70e429f00a550f4ab9526c7f92c",

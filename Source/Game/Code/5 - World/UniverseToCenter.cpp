@@ -3,6 +3,10 @@
 #include "Engine/Debug/DebugLog.h"
 #include "Engine/Level/Actor.h"
 #include "Engine/Particles/ParticleEffect.h"
+#include "Game/Code/Util/EventHub.h"
+
+const std::string UniverseToCenter::WILL_RESET_WORLD_TO_CENTER_EVENT = "WillResetWorldToCenterEvent";
+const std::string UniverseToCenter::RESET_WORLD_TO_CENTER_EVENT = "ResetWorldToCenterEvent";
 
 UniverseToCenter::UniverseToCenter(const SpawnParams& params)
     : Script(params)
@@ -36,7 +40,7 @@ void UniverseToCenter::OnDisable()
 
 void UniverseToCenter::OnUpdate()
 {
-    DebugLog::Log(String::Format(TEXT("pos {}"), shipActor->GetPosition().Length()));
+   // DebugLog::Log(String::Format(TEXT("pos {}"), shipActor->GetPosition().Length()));
 
     Vector3 currentUniversePos = universeActor->GetPosition();
     Vector3 shipWorldPos = shipActor->GetPosition();
@@ -44,11 +48,9 @@ void UniverseToCenter::OnUpdate()
     if (shipWorldPos.Length() >= distanceThreshold)
     {
         DebugLog::Log(TEXT("Reset"));
-        universeActor->SetPosition(currentUniversePos - shipWorldPos);
 
-        for (auto& trail : shipTrails)
-        {
-			trail->ResetSimulation();
-        }
+        EventHub::Trigger(WILL_RESET_WORLD_TO_CENTER_EVENT);
+        universeActor->SetPosition(currentUniversePos - shipWorldPos);
+		EventHub::Trigger(RESET_WORLD_TO_CENTER_EVENT);
     }
 }
