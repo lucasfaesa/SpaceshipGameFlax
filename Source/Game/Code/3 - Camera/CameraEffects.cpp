@@ -34,15 +34,8 @@ void CameraEffects::OnStart()
 
         cameraOriginalPos = camera->GetPosition();
 
-        resetWorldEventCallback_ = [this](const std::vector<void*>& args) { Test(args); };
-
-        EventHub::Subscribe(UniverseToCenter::RESET_WORLD_TO_CENTER_EVENT, resetWorldEventCallback_);
+        
     }
-}
-
-void CameraEffects::Test(const std::vector<void*>& args)
-{
-    DebugLog::Log(TEXT("LISTENED TO EVENT"));
 }
 
 void CameraEffects::OnEnable()
@@ -70,7 +63,7 @@ void CameraEffects::OnDestroy()
 {
     DebugLog::Log(TEXT("unsubcribe called"));
 
-    EventHub::Unsubscribe(UniverseToCenter::RESET_WORLD_TO_CENTER_EVENT, resetWorldEventCallback_);
+    //EventHub::Unsubscribe(UniverseToCenter::RESET_WORLD_TO_CENTER_EVENT, resetWorldEventCallback_);
 
 }
 

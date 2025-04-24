@@ -3,7 +3,7 @@
     "Game": {
       "commandName": "Executable",
       "workingDirectory": "D:/_PERSONAL/Flax/ShipProject",
-      "executablePath": "D:/Flax_1.9/Binaries/Editor/Win64/Development/FlaxEditor.exe",
+      "executablePath": "D:/Flax_1.10/Binaries/Editor/Win64/Development/FlaxEditor.exe",
       "commandLineArgs": "-project \"D:/_PERSONAL/Flax/ShipProject\"",
       "nativeDebugging": false
     }

@@ -21,7 +21,6 @@ DECLARE_SCRIPTING_TYPE(CameraEffects);
 
 	// [Script]
     void OnStart() override;
-    void Test(const std::vector<void*>& args);
     void OnEnable() override;
     void OnDisable() override;
     void OnUpdate() override;
@@ -49,7 +48,7 @@ private:
 
     ShipStatsJA* ship_stats_ = nullptr;
 
-    std::function<void(const std::vector<void*>&)> resetWorldEventCallback_;
+    
 
     float CalculateFov();
     void UpdateCameraFov();

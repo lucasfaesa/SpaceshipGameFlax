@@ -1,9 +1,9 @@
 {
 	"ID": "b1fb998443b55cb69c9156acb0b44ff8",
 	"TypeName": "Game.TodoJA",
-	"EngineBuild": 6605,
+	"EngineBuild": 6705,
 	"Data": {
-	"todos": "planets, mothership,  collect and sell system, upgrade UI, meteorite belt system, post process",
+	"todos": "meteorite belt system, planets, mothership,  collect and sell system, upgrade UI, , post process,\nvolumetric fog",
 	"basicConcept": "mothership shows a prompt when close, option to sell items and buttons to upgrade ship\nspeed, capacidade de carga, firerate, manuverability\n\nclosest meteorites, low resources, distant more resources, variable in sizes and colors"
 }
 }
