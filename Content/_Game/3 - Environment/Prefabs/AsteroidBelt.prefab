@@ -1,0 +1,45 @@
+{
+	"ID": "53a43eb24441041d739400b213e7b7b3",
+	"TypeName": "FlaxEngine.Prefab",
+	"EngineBuild": 6705,
+	"Data": [
+	{
+		"ID": "9d1bdb214b9882d5a9bbd3b7e106fa87",
+		"TypeName": "FlaxEngine.EmptyActor",
+		"ParentID": "00000000000000000000000000000000",
+		"Name": "AsteroidBelt"
+	},
+	{
+		"ID": "556d3b3e48911744e61faa877b02f921",
+		"TypeName": "Game.SplineSpawner",
+		"ParentID": "9d1bdb214b9882d5a9bbd3b7e106fa87",
+		"spline": "5bb62d634c77fbdec09b63b6cd59faac",
+		"actorToSpawn": "e3de57484cd2f995bb2ffc98e0e6245f",
+		"amount": 10000,
+		"maxRandomOffset": {
+			"X": 30000.0,
+			"Y": 15000.0,
+			"Z": 30000.0
+		},
+		"maxRandomRotation": 360.0,
+		"maxRandomScale": 7
+	},
+	{
+		"ID": "5bb62d634c77fbdec09b63b6cd59faac",
+		"PrefabID": "6af164df40043ed274828598a6825a10",
+		"PrefabObjectID": "d416013b46c6fe6bf436069ed96cd1f2",
+		"ParentID": "9d1bdb214b9882d5a9bbd3b7e106fa87",
+		"Name": "AsteroidSpline",
+		"Transform": {
+			"Translation": {
+				"X": 1300.363037109375,
+				"Y": 0.0,
+				"Z": 491.0509338378906
+			}
+		},
+		"RemovedObjects": [
+			"a1f6d66f4d67131cb66769869e616bb6"
+		]
+	}
+]
+}

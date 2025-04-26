@@ -47,8 +47,6 @@ void UniverseToCenter::OnUpdate()
 
     if (shipWorldPos.Length() >= distanceThreshold)
     {
-        DebugLog::Log(TEXT("Reset"));
-
         EventHub::Trigger(WILL_RESET_WORLD_TO_CENTER_EVENT);
         universeActor->SetPosition(currentUniversePos - shipWorldPos);
 		EventHub::Trigger(RESET_WORLD_TO_CENTER_EVENT);

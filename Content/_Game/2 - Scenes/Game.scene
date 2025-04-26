@@ -352,7 +352,7 @@
 			},
 			"Control": "FlaxEngine.GUI.Label",
 			"Data": {
-	"Text": "Move: W, A, S, D\nBoost: Shift\nMove up: Space\nMove down: Ctrl\nBrake: R",
+	"Text": "Move: W, A, S, D\nBoost: Shift\nMove up: E\nMove down: Q\nBrake: R",
 	"CaseOption": 0,
 	"Bold": true,
 	"Italic": false,
@@ -694,7 +694,7 @@
 			"TypeName": "Game.LightFlicker",
 			"ParentID": "831ca9854f9e27e88e9c51be02f8057c",
 			"min_delay_between_flick": 2.305174463790714e30,
-			"max_delay_between_flick": -133649992.0,
+			"max_delay_between_flick": -221.25299072265625,
 			"minimum_intensity": 7.0,
 			"maximum_intensity": 9.0
 		},
@@ -752,7 +752,8 @@
 					"W": 0.9931917786598206
 				}
 			},
-			"StaticFlags": 0
+			"StaticFlags": 0,
+			"Far": 105910.0
 		},
 		{
 			"ID": "01ee2cb947171f1e3526a39ddee5efcd",
@@ -799,6 +800,7 @@
 			"ID": "cace31ec4d095c42da856ca280a581c7",
 			"TypeName": "FlaxEngine.StaticModel",
 			"ParentID": "c29040a34674c1f474b4dea7808ceb87",
+			"IsActive": false,
 			"Name": "Floor",
 			"Transform": {
 				"Translation": {
@@ -825,313 +827,65 @@
 			}
 		},
 		{
-			"ID": "16fa168940b7b57519457093dcddbf43",
-			"TypeName": "FlaxEngine.Spline",
-			"ParentID": "c29040a34674c1f474b4dea7808ceb87",
-			"Name": "Spline",
-			"Transform": {
-				"Translation": {
-					"X": 1300.363037109375,
-					"Y": 0.0,
-					"Z": 491.0509338378906
-				}
-			},
-			"Curve": {
-				"Keyframes": [
-					{
-						"Time": 0.0,
-						"Value": {
-							"Translation": {
-								"X": 5000.3037109375,
-								"Y": 0.0,
-								"Z": -15410.1328125
-							},
-							"Orientation": {
-								"X": 0.0,
-								"Y": 0.0,
-								"Z": 0.0,
-								"W": 1.0
-							},
-							"Scale": {
-								"X": 1.0,
-								"Y": 1.0,
-								"Z": 1.0
-							}
-						},
-						"TangentIn": {
-							"Translation": {
-								"X": 245.65045166015625,
-								"Y": -240.92567443847656,
-								"Z": -2718.302001953125
-							},
-							"Orientation": {
-								"X": 0.0,
-								"Y": 0.0,
-								"Z": 0.0,
-								"W": 1.0
-							},
-							"Scale": {
-								"X": 1.0,
-								"Y": 1.0,
-								"Z": 1.0
-							}
-						},
-						"TangentOut": {
-							"Translation": {
-								"X": -245.65045166015625,
-								"Y": 240.92567443847656,
-								"Z": 2718.302001953125
-							},
-							"Orientation": {
-								"X": 0.0,
-								"Y": 0.0,
-								"Z": 0.0,
-								"W": 1.0
-							},
-							"Scale": {
-								"X": 1.0,
-								"Y": 1.0,
-								"Z": 1.0
-							}
-						}
-					},
-					{
-						"Time": 1.0,
-						"Value": {
-							"Translation": {
-								"X": -57.533935546875,
-								"Y": 240.92567443847656,
-								"Z": -1449.6412353515625
-							},
-							"Orientation": {
-								"X": 0.0,
-								"Y": 0.0,
-								"Z": 0.0,
-								"W": 1.0
-							},
-							"Scale": {
-								"X": 1.0,
-								"Y": 1.0,
-								"Z": 1.0
-							}
-						},
-						"TangentIn": {
-							"Translation": {
-								"X": 468.85101318359375,
-								"Y": -133.18594360351563,
-								"Z": -2696.29296875
-							},
-							"Orientation": {
-								"X": 0.0,
-								"Y": 0.0,
-								"Z": 0.0,
-								"W": 1.0
-							},
-							"Scale": {
-								"X": 1.0,
-								"Y": 1.0,
-								"Z": 1.0
-							}
-						},
-						"TangentOut": {
-							"Translation": {
-								"X": -16.26092529296875,
-								"Y": 4.6192169189453125,
-								"Z": 93.51416015625
-							},
-							"Orientation": {
-								"X": 0.0,
-								"Y": 0.0,
-								"Z": 0.0,
-								"W": 1.0
-							},
-							"Scale": {
-								"X": 1.0,
-								"Y": 1.0,
-								"Z": 1.0
-							}
-						}
-					},
-					{
-						"Time": 1.0,
-						"Value": {
-							"Translation": {
-								"X": 117.324951171875,
-								"Y": 240.92567443847656,
-								"Z": 5016.48974609375
-							},
-							"Orientation": {
-								"X": 0.0,
-								"Y": 0.0,
-								"Z": 0.0,
-								"W": 1.0
-							},
-							"Scale": {
-								"X": 1.0,
-								"Y": 1.0,
-								"Z": 1.0
-							}
-						},
-						"TangentIn": {
-							"Translation": {
-								"X": 18.10821533203125,
-								"Y": 0.0,
-								"Z": -78.23388671875
-							},
-							"Orientation": {
-								"X": 0.0,
-								"Y": 0.0,
-								"Z": 0.0,
-								"W": 1.0
-							},
-							"Scale": {
-								"X": 1.0,
-								"Y": 1.0,
-								"Z": 1.0
-							}
-						},
-						"TangentOut": {
-							"Translation": {
-								"X": -3.315185546875,
-								"Y": 0.0,
-								"Z": 14.32275390625
-							},
-							"Orientation": {
-								"X": 0.0,
-								"Y": 0.0,
-								"Z": 0.0,
-								"W": 1.0
-							},
-							"Scale": {
-								"X": 1.0,
-								"Y": 1.0,
-								"Z": 1.0
-							}
-						}
-					},
-					{
-						"Time": 1.0,
-						"Value": {
-							"Translation": {
-								"X": 1204.595458984375,
-								"Y": 240.92567443847656,
-								"Z": 18850.8359375
-							},
-							"Orientation": {
-								"X": 0.0,
-								"Y": 0.0,
-								"Z": 0.0,
-								"W": 1.0
-							},
-							"Scale": {
-								"X": 1.0,
-								"Y": 1.0,
-								"Z": 1.0
-							}
-						},
-						"TangentIn": {
-							"Translation": {
-								"X": 18.10821533203125,
-								"Y": 0.0,
-								"Z": -78.23388671875
-							},
-							"Orientation": {
-								"X": 0.0,
-								"Y": 0.0,
-								"Z": 0.0,
-								"W": 1.0
-							},
-							"Scale": {
-								"X": 1.0,
-								"Y": 1.0,
-								"Z": 1.0
-							}
-						},
-						"TangentOut": {
-							"Translation": {
-								"X": -3.315185546875,
-								"Y": 0.0,
-								"Z": 14.32275390625
-							},
-							"Orientation": {
-								"X": 0.0,
-								"Y": 0.0,
-								"Z": 0.0,
-								"W": 1.0
-							},
-							"Scale": {
-								"X": 1.0,
-								"Y": 1.0,
-								"Z": 1.0
-							}
-						}
-					},
-					{
-						"Time": 1.0,
-						"Value": {
-							"Translation": {
-								"X": -1747.5908203125,
-								"Y": 240.92567443847656,
-								"Z": 39767.73828125
-							},
-							"Orientation": {
-								"X": 0.0,
-								"Y": 0.0,
-								"Z": 0.0,
-								"W": 1.0
-							},
-							"Scale": {
-								"X": 1.0,
-								"Y": 1.0,
-								"Z": 1.0
-							}
-						},
-						"TangentIn": {
-							"Translation": {
-								"X": 18.10821533203125,
-								"Y": 0.0,
-								"Z": -78.23388671875
-							},
-							"Orientation": {
-								"X": 0.0,
-								"Y": 0.0,
-								"Z": 0.0,
-								"W": 1.0
-							},
-							"Scale": {
-								"X": 1.0,
-								"Y": 1.0,
-								"Z": 1.0
-							}
-						},
-						"TangentOut": {
-							"Translation": {
-								"X": -3.315185546875,
-								"Y": 0.0,
-								"Z": 14.32275390625
-							},
-							"Orientation": {
-								"X": 0.0,
-								"Y": 0.0,
-								"Z": 0.0,
-								"W": 1.0
-							},
-							"Scale": {
-								"X": 1.0,
-								"Y": 1.0,
-								"Z": 1.0
-							}
-						}
-					}
-				]
-			}
+			"ID": "924989ad4ff7798c4d7373a441993c2b",
+			"PrefabID": "53a43eb24441041d739400b213e7b7b3",
+			"PrefabObjectID": "9d1bdb214b9882d5a9bbd3b7e106fa87",
+			"ParentID": "c29040a34674c1f474b4dea7808ceb87"
 		},
 		{
-			"ID": "2fec156742e90b02520d7288ecc9ef4b",
-			"TypeName": "Game.SplineSpawner",
-			"ParentID": "16fa168940b7b57519457093dcddbf43",
-			"spline": "16fa168940b7b57519457093dcddbf43",
-			"actorToSpawn": "e3de57484cd2f995bb2ffc98e0e6245f"
+			"ID": "06a4fb144674f09b18dcd68bcc56dfaa",
+			"PrefabID": "53a43eb24441041d739400b213e7b7b3",
+			"PrefabObjectID": "556d3b3e48911744e61faa877b02f921",
+			"ParentID": "924989ad4ff7798c4d7373a441993c2b",
+			"spline": "16fa168940b7b57519457093dcddbf43"
+		},
+		{
+			"ID": "16fa168940b7b57519457093dcddbf43",
+			"PrefabID": "53a43eb24441041d739400b213e7b7b3",
+			"PrefabObjectID": "5bb62d634c77fbdec09b63b6cd59faac",
+			"ParentID": "924989ad4ff7798c4d7373a441993c2b"
+		},
+		{
+			"ID": "391b76a646d7ea89d00b8896c353a86a",
+			"TypeName": "FlaxEngine.SpriteRender",
+			"ParentID": "c29040a34674c1f474b4dea7808ceb87",
+			"Name": "WaterPlanetSprite",
+			"Transform": {
+				"Translation": {
+					"X": 72061.6875,
+					"Y": 0.0,
+					"Z": -97.21353912353516
+				}
+			},
+			"Size": {
+				"X": 130000.0,
+				"Y": 130000.0
+			},
+			"Sprite": {},
+			"Image": "a732df9c49b452d541b6a7bcc41eae95",
+			"Material": "e930c9dc4a18c0bfc86115a21d5e69ec",
+			"SortOrder": -1
+		},
+		{
+			"ID": "428ef92948f9a067f523f88e5496cf05",
+			"TypeName": "Game.PlanetDistanceMaintainer",
+			"ParentID": "391b76a646d7ea89d00b8896c353a86a",
+			"Target": "aa5d4e8241dc383e9fcd06b51de402a7"
+		},
+		{
+			"ID": "37712c88455ea71bb850dea74e27093c",
+			"TypeName": "FlaxEngine.ExponentialHeightFog",
+			"ParentID": "c98c381648821a3e37ab2586e063813b",
+			"Name": "ExponentialHeightFog",
+			"FogDensity": 0.0029999949038028717,
+			"FogHeightFalloff": 0.00009999999747378752,
+			"FogInscatteringColor": {
+				"R": 0.22529073059558868,
+				"G": 0.3153782784938812,
+				"B": 0.3222222328186035,
+				"A": 1.0
+			},
+			"VolumetricFogEnable": true
 		}
 	]
 }
