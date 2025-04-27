@@ -3,7 +3,7 @@
 	"TypeName": "Game.TodoJA",
 	"EngineBuild": 6705,
 	"Data": {
-	"todos": "learn quadtree for meteors? culled LOD system for far  away meteors,, mothership, \n collect and sell system, upgrade UI, , post process,",
+	"todos": "learn quadtree for meteors? mothership, collect and sell system, upgrade UI, , post process,",
 	"basicConcept": "mothership shows a prompt when close, option to sell items and buttons to upgrade ship\nspeed, capacidade de carga, firerate, manuverability\n\nclosest meteorites, low resources, distant more resources, variable in sizes and colors"
 }
 }

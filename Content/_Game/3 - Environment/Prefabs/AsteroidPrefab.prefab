@@ -6,15 +6,14 @@
 	{
 		"ID": "45ad6672407deef3318a1abd36e17f9c",
 		"TypeName": "FlaxEngine.StaticModel",
-		"ParentID": "00000000000000000000000000000000",
 		"Name": "Meteor",
 		"StaticFlags": 0,
 		"Model": "e9ff9c9144c356ecf6417babf569fb00",
 		"Buffer": {
 			"Entries": [
 				{
-					"Material": "00000000000000000000000000000000",
-					"ShadowsMode": 3,
+					"Material": "8e9d705d4e79b5d274da0fabe4355a13",
+					"ShadowsMode": 0,
 					"Visible": true,
 					"ReceiveDecals": true
 				}

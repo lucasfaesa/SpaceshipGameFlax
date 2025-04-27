@@ -32,7 +32,7 @@ void CameraEffects::OnStart()
         camera_shake_intensity = 0;
         stop_speed_lines_delay = static_cast<float>(speed_lines_particle->GetParameterValue(speed_lines_emitter, speed_lines_spawn_rate_parameter));
 
-        cameraOriginalPos = camera->GetPosition();
+        cameraOriginalPos = camera->GetLocalPosition();
 
         
     }

@@ -534,6 +534,13 @@
 			"TypeName": "FlaxEngine.CharacterController",
 			"ParentID": "c29040a34674c1f474b4dea7808ceb87",
 			"Name": "CharacterController",
+			"Transform": {
+				"Translation": {
+					"X": 0.0,
+					"Y": 0.0,
+					"Z": -2118.6201171875
+				}
+			},
 			"StaticFlags": 0,
 			"Radius": 77.0,
 			"Height": 0.0,
@@ -830,7 +837,14 @@
 			"ID": "924989ad4ff7798c4d7373a441993c2b",
 			"PrefabID": "53a43eb24441041d739400b213e7b7b3",
 			"PrefabObjectID": "9d1bdb214b9882d5a9bbd3b7e106fa87",
-			"ParentID": "c29040a34674c1f474b4dea7808ceb87"
+			"ParentID": "c29040a34674c1f474b4dea7808ceb87",
+			"Transform": {
+				"Translation": {
+					"X": 17546.12109375,
+					"Y": 0.0,
+					"Z": 0.0
+				}
+			}
 		},
 		{
 			"ID": "06a4fb144674f09b18dcd68bcc56dfaa",
@@ -852,7 +866,7 @@
 			"Name": "WaterPlanetSprite",
 			"Transform": {
 				"Translation": {
-					"X": 72061.6875,
+					"X": 56481.68359375,
 					"Y": 0.0,
 					"Z": -97.21353912353516
 				}
@@ -871,6 +885,60 @@
 			"TypeName": "Game.PlanetDistanceMaintainer",
 			"ParentID": "391b76a646d7ea89d00b8896c353a86a",
 			"Target": "aa5d4e8241dc383e9fcd06b51de402a7"
+		},
+		{
+			"ID": "04e1efd345f814403154eba6c7d77196",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "c29040a34674c1f474b4dea7808ceb87",
+			"Name": "Mothership",
+			"Transform": {
+				"Translation": {
+					"X": -2985.8505859375,
+					"Y": 0.0,
+					"Z": 10460.232421875
+				},
+				"Orientation": {
+					"X": 0.0,
+					"Y": 0.5226863026618958,
+					"Z": 0.0,
+					"W": 0.8525251150131226
+				}
+			},
+			"Model": "60347b264ef11811da074dbfecc83843",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "dd873beb446b1e7091b92a97a0a3c119",
+						"ShadowsMode": 1,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "0506df1e4f879d036716718691ff06f9",
+						"ShadowsMode": 1,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "462d07b345df0bfb8d1390879e1622b4",
+						"ShadowsMode": 1,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "04e9e2c846d99aa25eb943ab25de7c70",
+						"ShadowsMode": 1,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "a83f0d414ec7422a305555b8cef26d44",
+						"ShadowsMode": 1,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
 		},
 		{
 			"ID": "37712c88455ea71bb850dea74e27093c",
