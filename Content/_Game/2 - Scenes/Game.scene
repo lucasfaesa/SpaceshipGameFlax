@@ -488,6 +488,13 @@
 			"TypeName": "FlaxEngine.PostFxVolume",
 			"ParentID": "c98c381648821a3e37ab2586e063813b",
 			"Name": "GlobalPostFxVolume",
+			"Transform": {
+				"Translation": {
+					"X": 0.0,
+					"Y": 0.0,
+					"Z": -2015.393798828125
+				}
+			},
 			"Priority": 1,
 			"IsBounded": false,
 			"Settings": {
@@ -939,6 +946,13 @@
 					}
 				]
 			}
+		},
+		{
+			"ID": "54fa9422491c448eac1d9abf570ac030",
+			"TypeName": "FlaxEngine.MeshCollider",
+			"ParentID": "04e1efd345f814403154eba6c7d77196",
+			"Name": "MeshCollider",
+			"CollisionData": "65207eed49af30626e70b8a52fefa7b8"
 		},
 		{
 			"ID": "37712c88455ea71bb850dea74e27093c",
