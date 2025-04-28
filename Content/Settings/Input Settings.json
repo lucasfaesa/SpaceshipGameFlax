@@ -6,10 +6,10 @@
 	"ActionMappings": [
 		{
 			"Name": "Fire",
-			"Mode": 1,
+			"Mode": 0,
 			"Key": 0,
 			"MouseButton": 1,
-			"GamepadButton": 14,
+			"GamepadButton": 11,
 			"Gamepad": 0
 		},
 		{

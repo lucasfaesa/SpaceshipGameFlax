@@ -563,6 +563,13 @@
 			"ship_actor": "ee18318f47ebaf65c68762b6f43918b5"
 		},
 		{
+			"ID": "3013ff3e4321df4885dd1ca866de09e4",
+			"TypeName": "Game.ShipCombat",
+			"ParentID": "aa5d4e8241dc383e9fcd06b51de402a7",
+			"shootingReference": "7c9beb184ba300ead74fee9a0ac35723",
+			"layers_to_hit": 4294967289
+		},
+		{
 			"ID": "ee18318f47ebaf65c68762b6f43918b5",
 			"TypeName": "FlaxEngine.StaticModel",
 			"ParentID": "aa5d4e8241dc383e9fcd06b51de402a7",
@@ -740,6 +747,24 @@
 				}
 			},
 			"StaticFlags": 0
+		},
+		{
+			"ID": "7c9beb184ba300ead74fee9a0ac35723",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "ee18318f47ebaf65c68762b6f43918b5",
+			"Name": "ShootReference",
+			"Transform": {
+				"Translation": {
+					"X": 0.0,
+					"Y": 1009.108154296875,
+					"Z": 3133.8505859375
+				},
+				"Scale": {
+					"X": 33.33333969116211,
+					"Y": 33.33333969116211,
+					"Z": 33.33333969116211
+				}
+			}
 		},
 		{
 			"ID": "d32bab9247a885d6965addace1b47e69",
