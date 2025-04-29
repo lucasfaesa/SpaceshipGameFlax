@@ -1,0 +1,53 @@
+{
+	"ID": "9c8074b04b6cf18a37ed168bc5a4486b",
+	"TypeName": "FlaxEngine.Prefab",
+	"EngineBuild": 6705,
+	"Data": [
+	{
+		"ID": "fbf64765456ad328cebace81ee206e83",
+		"TypeName": "FlaxEngine.RigidBody",
+		"Name": "Bullet",
+		"Layer": 2,
+		"Mass": 95.54014587402344,
+		"Constraints": 59,
+		"EnableGravity": false
+	},
+	{
+		"ID": "397095384eb0b685c2d6009e954fec92",
+		"TypeName": "Game.BulletBehavior",
+		"ParentID": "fbf64765456ad328cebace81ee206e83",
+		"rigidbody": "fbf64765456ad328cebace81ee206e83",
+		"bulletSpeed": 1000.0
+	},
+	{
+		"ID": "50e3f5554ee3b2b66d42aaafd2169e83",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "fbf64765456ad328cebace81ee206e83",
+		"Name": "Model",
+		"Layer": 2,
+		"Model": "0b4f4746481c1b4e6fe842a0599e57d1",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "00000000000000000000000000000000",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "4a79895348b8002c43b5bbaa6bf09195",
+		"TypeName": "FlaxEngine.BoxCollider",
+		"ParentID": "fbf64765456ad328cebace81ee206e83",
+		"Name": "BoxCollider",
+		"Layer": 2,
+		"Size": {
+			"X": 117.16596221923828,
+			"Y": 117.16596221923828,
+			"Z": 101.16590118408203
+		}
+	}
+]
+}

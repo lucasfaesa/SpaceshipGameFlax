@@ -549,6 +549,7 @@
 				}
 			},
 			"StaticFlags": 0,
+			"Layer": 1,
 			"Radius": 77.0,
 			"Height": 0.0,
 			"NonWalkableMode": 1
@@ -567,7 +568,8 @@
 			"TypeName": "Game.ShipCombat",
 			"ParentID": "aa5d4e8241dc383e9fcd06b51de402a7",
 			"shootingReference": "7c9beb184ba300ead74fee9a0ac35723",
-			"layers_to_hit": 4294967289
+			"bulletPrefab": "9c8074b04b6cf18a37ed168bc5a4486b",
+			"layers_to_hit": 4294967288
 		},
 		{
 			"ID": "ee18318f47ebaf65c68762b6f43918b5",
@@ -587,6 +589,7 @@
 				}
 			},
 			"StaticFlags": 0,
+			"Layer": 1,
 			"Model": "dae7b7654c755bc3fe391dba5cef651b",
 			"Buffer": {
 				"Entries": [
@@ -604,14 +607,16 @@
 			"TypeName": "FlaxEngine.EmptyActor",
 			"ParentID": "ee18318f47ebaf65c68762b6f43918b5",
 			"Name": "Effects",
-			"StaticFlags": 0
+			"StaticFlags": 0,
+			"Layer": 1
 		},
 		{
 			"ID": "c4488a434b0e2908ed4436b3298daec9",
 			"TypeName": "FlaxEngine.EmptyActor",
 			"ParentID": "315925414ebbb43093e504bf87150ee6",
 			"Name": "Trails",
-			"StaticFlags": 0
+			"StaticFlags": 0,
+			"Layer": 1
 		},
 		{
 			"ID": "36840d654e8d8deeec3411bf778b136c",
@@ -640,6 +645,7 @@
 				}
 			},
 			"StaticFlags": 0,
+			"Layer": 1,
 			"Overrides": [],
 			"ParticleSystem": "98b45f9e46e8ba9417cb5090d38ae568"
 		},
@@ -661,6 +667,7 @@
 				}
 			},
 			"StaticFlags": 0,
+			"Layer": 1,
 			"Overrides": [],
 			"ParticleSystem": "98b45f9e46e8ba9417cb5090d38ae568"
 		},
@@ -669,7 +676,8 @@
 			"TypeName": "FlaxEngine.EmptyActor",
 			"ParentID": "315925414ebbb43093e504bf87150ee6",
 			"Name": "JetEngineParticle",
-			"StaticFlags": 0
+			"StaticFlags": 0,
+			"Layer": 1
 		},
 		{
 			"ID": "78c17cfe430abd2d0292f596195c218a",
@@ -684,6 +692,7 @@
 				}
 			},
 			"StaticFlags": 0,
+			"Layer": 1,
 			"Overrides": [],
 			"ParticleSystem": "6bebe55e496a27147c893581cb357366"
 		},
@@ -700,6 +709,7 @@
 				}
 			},
 			"StaticFlags": 0,
+			"Layer": 1,
 			"Overrides": [],
 			"ParticleSystem": "6bebe55e496a27147c893581cb357366"
 		},
@@ -708,14 +718,15 @@
 			"TypeName": "FlaxEngine.EmptyActor",
 			"ParentID": "315925414ebbb43093e504bf87150ee6",
 			"Name": "Lights",
-			"StaticFlags": 0
+			"StaticFlags": 0,
+			"Layer": 1
 		},
 		{
 			"ID": "09e3f11f4b7bdf7477cf9c91de4ceacb",
 			"TypeName": "Game.LightFlicker",
 			"ParentID": "831ca9854f9e27e88e9c51be02f8057c",
 			"min_delay_between_flick": 2.305174463790714e30,
-			"max_delay_between_flick": -221.25299072265625,
+			"max_delay_between_flick": 1430670236410970000.0,
 			"minimum_intensity": 7.0,
 			"maximum_intensity": 9.0
 		},
@@ -731,7 +742,8 @@
 					"Z": -2364.255615234375
 				}
 			},
-			"StaticFlags": 0
+			"StaticFlags": 0,
+			"Layer": 1
 		},
 		{
 			"ID": "4aa3552a4ed241e584b2b88b3014f6c3",
@@ -746,7 +758,8 @@
 					"Z": -2364.255615234375
 				}
 			},
-			"StaticFlags": 0
+			"StaticFlags": 0,
+			"Layer": 1
 		},
 		{
 			"ID": "7c9beb184ba300ead74fee9a0ac35723",
@@ -764,14 +777,16 @@
 					"Y": 33.33333969116211,
 					"Z": 33.33333969116211
 				}
-			}
+			},
+			"Layer": 1
 		},
 		{
 			"ID": "d32bab9247a885d6965addace1b47e69",
 			"TypeName": "FlaxEngine.EmptyActor",
 			"ParentID": "aa5d4e8241dc383e9fcd06b51de402a7",
 			"Name": "CameraSocket",
-			"StaticFlags": 0
+			"StaticFlags": 0,
+			"Layer": 1
 		},
 		{
 			"ID": "140d048b4731f812289b0482192a1971",
@@ -792,6 +807,7 @@
 				}
 			},
 			"StaticFlags": 0,
+			"Layer": 1,
 			"Far": 105910.0
 		},
 		{
@@ -808,14 +824,16 @@
 			"TypeName": "FlaxEngine.AudioListener",
 			"ParentID": "140d048b4731f812289b0482192a1971",
 			"Name": "Audio Listener",
-			"StaticFlags": 0
+			"StaticFlags": 0,
+			"Layer": 1
 		},
 		{
 			"ID": "47037e3646dee57731c674ad88d32ed1",
 			"TypeName": "FlaxEngine.EmptyActor",
 			"ParentID": "140d048b4731f812289b0482192a1971",
 			"Name": "Effects",
-			"StaticFlags": 0
+			"StaticFlags": 0,
+			"Layer": 1
 		},
 		{
 			"ID": "292d09b049c98740920e728c723c389f",
@@ -830,6 +848,7 @@
 				}
 			},
 			"StaticFlags": 0,
+			"Layer": 1,
 			"Overrides": [],
 			"ParticleSystem": "d76f09904893c9a5660ccc96d8feacf1",
 			"PlayOnStart": false,
@@ -936,6 +955,7 @@
 					"W": 0.8525251150131226
 				}
 			},
+			"Layer": 4,
 			"Model": "60347b264ef11811da074dbfecc83843",
 			"Buffer": {
 				"Entries": [
@@ -977,6 +997,7 @@
 			"TypeName": "FlaxEngine.MeshCollider",
 			"ParentID": "04e1efd345f814403154eba6c7d77196",
 			"Name": "MeshCollider",
+			"Layer": 4,
 			"CollisionData": "65207eed49af30626e70b8a52fefa7b8"
 		},
 		{

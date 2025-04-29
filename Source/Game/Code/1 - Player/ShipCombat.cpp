@@ -4,9 +4,11 @@
 #include "Engine/Debug/DebugLog.h"
 #include "Engine/Input/Input.h"
 #include "Engine/Level/Actor.h"
+#include "Engine/Level/Prefabs/PrefabManager.h"
 #include "Engine/Physics/Physics.h"
 #include "Engine/Physics/Types.h"
 #include "Engine/Physics/Actors/PhysicsColliderActor.h"
+#include "Game/Code/7 - Bullets/BulletBehavior.h"
 
 ShipCombat::ShipCombat(const SpawnParams& params)
     : Script(params)
@@ -50,7 +52,12 @@ void ShipCombat::Shoot()
 
     DebugLog::Log(TEXT("Shoot"));
 
-    RayCastHit hit;
+    Actor* bullet = PrefabManager::SpawnPrefab(bulletPrefab, shootingReference->GetPosition(),  shootingReference->GetOrientation());
+    BulletBehavior* bullet_behavior =  bullet->FindScript<BulletBehavior>();
+
+    bullet_behavior->Setup(shootingReference->GetTransform().GetForward().GetNormalized());
+
+    /*RayCastHit hit;
     if (Physics::RayCast(shootingReference->GetPosition(), shootingReference->GetDirection(), hit, MAX_float, layers_to_hit))
     {
         
@@ -58,7 +65,7 @@ void ShipCombat::Shoot()
         DEBUG_DRAW_LINE(shootingReference->GetPosition(), hit.Point, Color::Green, 0.0f, true);
 
         hit.Collider->GetParent()->SetIsActive(false);
-    }
+    }*/
     
 
     canShoot_ = false;

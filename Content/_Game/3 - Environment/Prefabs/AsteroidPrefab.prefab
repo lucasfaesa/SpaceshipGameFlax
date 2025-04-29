@@ -8,6 +8,7 @@
 		"TypeName": "FlaxEngine.StaticModel",
 		"Name": "Meteor",
 		"StaticFlags": 0,
+		"Layer": 3,
 		"Model": "e9ff9c9144c356ecf6417babf569fb00",
 		"Buffer": {
 			"Entries": [

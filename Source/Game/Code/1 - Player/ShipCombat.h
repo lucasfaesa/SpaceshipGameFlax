@@ -1,5 +1,6 @@
 ﻿#pragma once
 
+#include "Engine/Content/AssetReference.h"
 #include "Engine/Core/Types/LayersMask.h"
 #include "Engine/Scripting/Script.h"
 #include "Engine/Scripting/ScriptingObjectReference.h"
@@ -12,7 +13,8 @@ API_AUTO_SERIALIZATION();
 DECLARE_SCRIPTING_TYPE(ShipCombat);
 
 	API_FIELD(Attributes) ScriptingObjectReference<Actor> shootingReference = nullptr;
-    API_FIELD() LayersMask layers_to_hit;
+    API_FIELD(Attributes) AssetReference<Prefab> bulletPrefab;
+    API_FIELD(Attributes) LayersMask layers_to_hit;
 
     // [Script]
     void OnEnable() override;
