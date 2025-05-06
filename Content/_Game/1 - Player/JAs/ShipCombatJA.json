@@ -1,0 +1,9 @@
+{
+	"ID": "d3a3707f44db5b142ef839a3e6af55eb",
+	"TypeName": "Game.ShipCombatJA",
+	"EngineBuild": 6705,
+	"Data": {
+	"DelayBetweenShots": 0.1,
+	"BulletLifetime": 1.0
+}
+}

@@ -2,6 +2,7 @@
 
 #include "Engine/Debug/DebugDraw.h"
 #include "Engine/Debug/DebugLog.h"
+#include "Engine/Engine/Time.h"
 #include "Engine/Input/Input.h"
 #include "Engine/Level/Actor.h"
 #include "Engine/Level/Prefabs/PrefabManager.h"
@@ -15,6 +16,16 @@ ShipCombat::ShipCombat(const SpawnParams& params)
 {
     // Enable ticking OnUpdate function
     _tickUpdate = true;
+}
+
+void ShipCombat::OnStart()
+{
+    if (shipCombatJaAsset == nullptr)
+    {
+        _tickUpdate = false;
+        return;
+    }
+    shipCombatJAInstance_ = shipCombatJaAsset.GetInstance();
 }
 
 void ShipCombat::OnEnable()
@@ -45,18 +56,21 @@ void ShipCombat::InputReading()
 
 void ShipCombat::Shoot()
 {
-    DebugLog::Log(TEXT("Try Shoot"));
-
-    if (!canShoot_)
+    if (!canShoot_ || Time::GetGameTime() - lastShotTime_ < shipCombatJAInstance_->DelayBetweenShots)
         return;
 
-    DebugLog::Log(TEXT("Shoot"));
+    Actor* bullet = PrefabManager::SpawnPrefab(bulletPrefab,
+												shootingReference[nextShotIndex_]->GetPosition(),
+											shootingReference[nextShotIndex_]->GetOrientation());
 
-    Actor* bullet = PrefabManager::SpawnPrefab(bulletPrefab, shootingReference->GetPosition(),  shootingReference->GetOrientation());
-    BulletBehavior* bullet_behavior =  bullet->FindScript<BulletBehavior>();
+    BulletBehavior* bullet_behavior = bullet->FindScript<BulletBehavior>();
+    bullet_behavior->Setup(shootingReference[nextShotIndex_]->GetTransform().GetForward().GetNormalized());
 
-    bullet_behavior->Setup(shootingReference->GetTransform().GetForward().GetNormalized());
+    // Now increment the index, wrapping around
+    nextShotIndex_ = (nextShotIndex_ + 1) % shootingReference.Count();
 
+
+    lastShotTime_ = Time::GetGameTime();
     /*RayCastHit hit;
     if (Physics::RayCast(shootingReference->GetPosition(), shootingReference->GetDirection(), hit, MAX_float, layers_to_hit))
     {

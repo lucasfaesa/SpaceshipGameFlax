@@ -7,6 +7,7 @@
 		"ID": "fbf64765456ad328cebace81ee206e83",
 		"TypeName": "FlaxEngine.RigidBody",
 		"Name": "Bullet",
+		"StaticFlags": 0,
 		"Layer": 2,
 		"Mass": 95.54014587402344,
 		"Constraints": 59,
@@ -16,6 +17,7 @@
 		"ID": "397095384eb0b685c2d6009e954fec92",
 		"TypeName": "Game.BulletBehavior",
 		"ParentID": "fbf64765456ad328cebace81ee206e83",
+		"shipCombatJA": "d3a3707f44db5b142ef839a3e6af55eb",
 		"rigidbody": "fbf64765456ad328cebace81ee206e83",
 		"bulletSpeed": 1000.0
 	},
@@ -24,6 +26,14 @@
 		"TypeName": "FlaxEngine.StaticModel",
 		"ParentID": "fbf64765456ad328cebace81ee206e83",
 		"Name": "Model",
+		"Transform": {
+			"Scale": {
+				"X": 0.10229279100894928,
+				"Y": 0.09437002241611481,
+				"Z": 1.0
+			}
+		},
+		"StaticFlags": 0,
 		"Layer": 2,
 		"Model": "0b4f4746481c1b4e6fe842a0599e57d1",
 		"Buffer": {
@@ -42,6 +52,7 @@
 		"TypeName": "FlaxEngine.BoxCollider",
 		"ParentID": "fbf64765456ad328cebace81ee206e83",
 		"Name": "BoxCollider",
+		"StaticFlags": 0,
 		"Layer": 2,
 		"Size": {
 			"X": 117.16596221923828,

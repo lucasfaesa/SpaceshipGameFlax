@@ -567,7 +567,11 @@
 			"ID": "3013ff3e4321df4885dd1ca866de09e4",
 			"TypeName": "Game.ShipCombat",
 			"ParentID": "aa5d4e8241dc383e9fcd06b51de402a7",
-			"shootingReference": "7c9beb184ba300ead74fee9a0ac35723",
+			"shipCombatJaAsset": "d3a3707f44db5b142ef839a3e6af55eb",
+			"shootingReference": [
+				"7c9beb184ba300ead74fee9a0ac35723",
+				"b33c73eb456dacda72999d9a4cc5e85c"
+			],
 			"bulletPrefab": "9c8074b04b6cf18a37ed168bc5a4486b",
 			"layers_to_hit": 4294967288
 		},
@@ -765,12 +769,43 @@
 			"ID": "7c9beb184ba300ead74fee9a0ac35723",
 			"TypeName": "FlaxEngine.EmptyActor",
 			"ParentID": "ee18318f47ebaf65c68762b6f43918b5",
-			"Name": "ShootReference",
+			"Name": "ShootReferenceLeft",
 			"Transform": {
 				"Translation": {
+					"X": -2238.741943359375,
+					"Y": 749.2963256835938,
+					"Z": 325.8219909667969
+				},
+				"Orientation": {
 					"X": 0.0,
-					"Y": 1009.108154296875,
-					"Z": 3133.8505859375
+					"Y": 0.008726535364985466,
+					"Z": 0.0,
+					"W": 0.9999619126319885
+				},
+				"Scale": {
+					"X": 33.33333969116211,
+					"Y": 33.33333969116211,
+					"Z": 33.33333969116211
+				}
+			},
+			"Layer": 1
+		},
+		{
+			"ID": "b33c73eb456dacda72999d9a4cc5e85c",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "ee18318f47ebaf65c68762b6f43918b5",
+			"Name": "ShootReferenceRight",
+			"Transform": {
+				"Translation": {
+					"X": 2238.741943359375,
+					"Y": 749.2963256835938,
+					"Z": 325.8219909667969
+				},
+				"Orientation": {
+					"X": 0.0,
+					"Y": -0.008726535364985466,
+					"Z": 0.0,
+					"W": 0.9999619126319885
 				},
 				"Scale": {
 					"X": 33.33333969116211,

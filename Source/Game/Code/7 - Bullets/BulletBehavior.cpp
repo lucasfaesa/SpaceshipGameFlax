@@ -1,5 +1,9 @@
 ﻿#include "BulletBehavior.h"
 
+#include "Engine/Debug/DebugLog.h"
+#include "Engine/Engine/Time.h"
+#include "Game/Code/1 - Player/ShipCombatJA.h"
+
 BulletBehavior::BulletBehavior(const SpawnParams& params)
     : Script(params)
 {
@@ -9,6 +13,15 @@ BulletBehavior::BulletBehavior(const SpawnParams& params)
 
 void BulletBehavior::OnStart()
 {
+    if (shipCombatJA == nullptr)
+    {
+        _tickUpdate = false;
+        return;
+    }
+
+    shipCombatJAInstance = shipCombatJA.GetInstance();
+
+    GetActor()->DeleteObject(shipCombatJAInstance->BulletLifetime);
 }
 
 void BulletBehavior::OnEnable()
@@ -23,7 +36,7 @@ void BulletBehavior::OnDisable()
 
 void BulletBehavior::OnUpdate()
 {
-    
+
 }
 
 void BulletBehavior::Setup(const Vector3& direction) const
@@ -33,5 +46,5 @@ void BulletBehavior::Setup(const Vector3& direction) const
 
 void BulletBehavior::MoveBullet(const Vector3& direction) const
 {
-    rigidbody->AddForce(direction * bulletSpeed, ForceMode::VelocityChange);
+    rigidbody->AddForce(direction * (bulletSpeed * 10), ForceMode::VelocityChange);
 }
