@@ -20,28 +20,39 @@ void BulletBehavior::OnStart()
     }
 
     shipCombatJAInstance = shipCombatJA.GetInstance();
-
-    GetActor()->DeleteObject(shipCombatJAInstance->BulletLifetime);
 }
 
 void BulletBehavior::OnEnable()
 {
     // Here you can add code that needs to be called when script is enabled (eg. register for events)
+    isAvailable = false;
 }
 
 void BulletBehavior::OnDisable()
 {
     // Here you can add code that needs to be called when script is disabled (eg. unregister from events)
+    isAvailable = true;
 }
 
 void BulletBehavior::OnUpdate()
 {
+    bulletTimer_ += Time::GetDeltaTime();
 
+    if (bulletTimer_ >= shipCombatJAInstance->BulletLifetime)
+        this->GetActor()->SetIsActive(false);
 }
 
 void BulletBehavior::Setup(const Vector3& direction) const
 {
     MoveBullet(direction);
+}
+
+void BulletBehavior::Reset(const Vector3& direction, const Quaternion& rotation)
+{
+    GetActor()->SetPosition(direction);
+    GetActor()->SetOrientation(rotation);
+    GetActor()->SetIsActive(true);
+    bulletTimer_ = 0.f;
 }
 
 void BulletBehavior::MoveBullet(const Vector3& direction) const

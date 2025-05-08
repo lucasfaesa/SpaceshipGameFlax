@@ -730,7 +730,6 @@
 			"TypeName": "Game.LightFlicker",
 			"ParentID": "831ca9854f9e27e88e9c51be02f8057c",
 			"min_delay_between_flick": 2.305174463790714e30,
-			"max_delay_between_flick": 1430670236410970000.0,
 			"minimum_intensity": 7.0,
 			"maximum_intensity": 9.0
 		},
@@ -888,36 +887,6 @@
 			"ParticleSystem": "d76f09904893c9a5660ccc96d8feacf1",
 			"PlayOnStart": false,
 			"UpdateWhenOffscreen": false
-		},
-		{
-			"ID": "cace31ec4d095c42da856ca280a581c7",
-			"TypeName": "FlaxEngine.StaticModel",
-			"ParentID": "c29040a34674c1f474b4dea7808ceb87",
-			"IsActive": false,
-			"Name": "Floor",
-			"Transform": {
-				"Translation": {
-					"X": 0.0,
-					"Y": -89.16343688964844,
-					"Z": 0.0
-				},
-				"Scale": {
-					"X": 3000.0,
-					"Y": 1.0,
-					"Z": 3000.0
-				}
-			},
-			"Model": "b43f0f8f4aaba3f3156896a5a22ba493",
-			"Buffer": {
-				"Entries": [
-					{
-						"Material": "68b418a3401918753cfa07b673ccf7d6",
-						"ShadowsMode": 3,
-						"Visible": true,
-						"ReceiveDecals": true
-					}
-				]
-			}
 		},
 		{
 			"ID": "924989ad4ff7798c4d7373a441993c2b",

@@ -8,6 +8,7 @@
 #include "Engine/Core/Types/LayersMask.h"
 #include "Engine/Scripting/Script.h"
 #include "Engine/Scripting/ScriptingObjectReference.h"
+#include "Game/Code/7 - Bullets/BulletBehavior.h"
 
 constexpr auto INPUT_FIRE = TEXT("Fire");
 
@@ -33,9 +34,10 @@ private:
     byte nextShotIndex_ = 0;
     float lastShotTime_ = 0;
     ShipCombatJA* shipCombatJAInstance_ = nullptr;
-
+    std::vector<BulletBehavior*> bulletPool{};
 
 private:
     void InputReading();
     void Shoot();
+    BulletBehavior* GetAvailableBullet(int nextShotIndex);
 };

@@ -23,10 +23,12 @@ DECLARE_SCRIPTING_TYPE(BulletBehavior);
 
 public:
     void Setup(const Vector3& direction) const;
-
+    void Reset(const Vector3& direction, const Quaternion& rotation);
 private:
     void MoveBullet(const Vector3& direction) const;
 private:
-    float bulletLifetime_{};
     ShipCombatJA* shipCombatJAInstance;
+    float bulletTimer_{0};
+public:
+    bool isAvailable = false;
 };

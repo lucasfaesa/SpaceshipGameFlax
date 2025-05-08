@@ -59,28 +59,47 @@ void ShipCombat::Shoot()
     if (!canShoot_ || Time::GetGameTime() - lastShotTime_ < shipCombatJAInstance_->DelayBetweenShots)
         return;
 
-    Actor* bullet = PrefabManager::SpawnPrefab(bulletPrefab,
-												shootingReference[nextShotIndex_]->GetPosition(),
-											shootingReference[nextShotIndex_]->GetOrientation());
+    BulletBehavior* bullet = GetAvailableBullet(nextShotIndex_);
+    bullet->Setup(shootingReference[nextShotIndex_]->GetTransform().GetForward().GetNormalized());
 
-    BulletBehavior* bullet_behavior = bullet->FindScript<BulletBehavior>();
-    bullet_behavior->Setup(shootingReference[nextShotIndex_]->GetTransform().GetForward().GetNormalized());
-
-    // Now increment the index, wrapping around
     nextShotIndex_ = (nextShotIndex_ + 1) % shootingReference.Count();
 
-
     lastShotTime_ = Time::GetGameTime();
-    /*RayCastHit hit;
-    if (Physics::RayCast(shootingReference->GetPosition(), shootingReference->GetDirection(), hit, MAX_float, layers_to_hit))
-    {
-        
-        DEBUG_DRAW_SPHERE(BoundingSphere(hit.Point, 50), Color::Red, 0.0f, true);
-        DEBUG_DRAW_LINE(shootingReference->GetPosition(), hit.Point, Color::Green, 0.0f, true);
-
-        hit.Collider->GetParent()->SetIsActive(false);
-    }*/
-    
 
     canShoot_ = false;
 }
+
+BulletBehavior* ShipCombat::GetAvailableBullet(int nextShotIndex)
+{
+    DebugLog::Log(nextShotIndex == 0 ? TEXT("Left") : TEXT("Right"));
+
+    if (!bulletPool.empty())
+    {
+		for (auto& bullet : bulletPool)
+		{
+	        if (bullet->isAvailable)
+	        {
+                bullet->Reset(shootingReference[nextShotIndex]->GetPosition(), shootingReference[nextShotIndex]->GetOrientation());
+	            return bullet;
+	        }
+		}
+    }
+
+    Actor* bullet = PrefabManager::SpawnPrefab(bulletPrefab, shootingReference[nextShotIndex]->GetPosition(),shootingReference[nextShotIndex]->GetOrientation());
+
+    BulletBehavior* bullet_behavior = bullet->FindScript<BulletBehavior>();
+
+    bulletPool.emplace_back(bullet_behavior);
+
+    return bullet_behavior;
+}
+
+/*RayCastHit hit;
+if (Physics::RayCast(shootingReference->GetPosition(), shootingReference->GetDirection(), hit, MAX_float, layers_to_hit))
+{
+
+    DEBUG_DRAW_SPHERE(BoundingSphere(hit.Point, 50), Color::Red, 0.0f, true);
+    DEBUG_DRAW_LINE(shootingReference->GetPosition(), hit.Point, Color::Green, 0.0f, true);
+
+    hit.Collider->GetParent()->SetIsActive(false);
+}*/
