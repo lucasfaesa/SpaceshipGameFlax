@@ -49,7 +49,7 @@
 			"Name": "Canvas Scalar",
 			"Transform": {
 				"Translation": {
-					"X": 1.0,
+					"X": 2.0,
 					"Y": 0.0,
 					"Z": 0.0
 				}
@@ -120,8 +120,8 @@
 		"Y": 1.0
 	},
 	"Offsets": {
-		"Left": 1.0,
-		"Right": -1.0,
+		"Left": 2.0,
+		"Right": -2.0,
 		"Top": 0.0,
 		"Bottom": 0.0
 	},
@@ -730,6 +730,7 @@
 			"TypeName": "Game.LightFlicker",
 			"ParentID": "831ca9854f9e27e88e9c51be02f8057c",
 			"min_delay_between_flick": 2.305174463790714e30,
+			"max_delay_between_flick": 2539.796875,
 			"minimum_intensity": 7.0,
 			"maximum_intensity": 9.0
 		},

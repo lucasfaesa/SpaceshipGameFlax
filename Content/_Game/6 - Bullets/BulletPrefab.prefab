@@ -19,6 +19,7 @@
 		"ParentID": "fbf64765456ad328cebace81ee206e83",
 		"shipCombatJA": "d3a3707f44db5b142ef839a3e6af55eb",
 		"rigidbody": "fbf64765456ad328cebace81ee206e83",
+		"boxCollider": "4a79895348b8002c43b5bbaa6bf09195",
 		"bulletSpeed": 1000.0
 	},
 	{
@@ -29,7 +30,7 @@
 		"Transform": {
 			"Scale": {
 				"X": 0.10229279100894928,
-				"Y": 0.09437002241611481,
+				"Y": 0.10229279100894928,
 				"Z": 1.0
 			}
 		},
@@ -54,10 +55,11 @@
 		"Name": "BoxCollider",
 		"StaticFlags": 0,
 		"Layer": 2,
+		"IsTrigger": true,
 		"Size": {
-			"X": 117.16596221923828,
-			"Y": 117.16596221923828,
-			"Z": 101.16590118408203
+			"X": 19.16596221923828,
+			"Y": 13.165962219238281,
+			"Z": 132.1658935546875
 		}
 	}
 ]

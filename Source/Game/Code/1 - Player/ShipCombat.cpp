@@ -71,7 +71,7 @@ void ShipCombat::Shoot()
 
 BulletBehavior* ShipCombat::GetAvailableBullet(int nextShotIndex)
 {
-    DebugLog::Log(nextShotIndex == 0 ? TEXT("Left") : TEXT("Right"));
+    //DebugLog::Log(nextShotIndex == 0 ? TEXT("Left") : TEXT("Right"));
 
     if (!bulletPool.empty())
     {
