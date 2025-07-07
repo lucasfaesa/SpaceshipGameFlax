@@ -79,8 +79,16 @@ void BulletBehavior::MoveBullet(const Vector3& direction) const
 
 void BulletBehavior::OnTriggerEnter(PhysicsColliderActor* other)
 {
-    DebugLog::Log(TEXT("Entered"));
+    
     DebugLog::Log(other->GetParent()->GetName());
+
+    Actor* parent = other->GetParent();
+    if (parent)
+    {
+        DebugLog::Log(TEXT("Destroyed"));
+        parent->DeleteObject();
+    }
+    
     DisableBullet();
 }
 
